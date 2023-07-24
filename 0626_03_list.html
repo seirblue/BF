@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>리스트태그</title>
+    <style>
+        ol#top {list-style:lower-roman;}
+        ol.tp {list-style: upper-roman;}
+        ul.tp {list-style: decimal;}
+        ul {list-style: circle;}
+        ul.p1 {list-style: disc;}
+        ul.p2 {list-style: upper-roman;}
+        ul.f1 {list-style-image: url(/images/ico_bbslist.gif);}
+    </style>
+    <!-- ol에 id를 주었을때 ol#id 이런식으로 입력해야함 (class도 마찬가지)-->
+  </head>
+  <body>
+    
+    <p><h3>리스트태그</h3></p>
+<ol id="top" class="tp">
+    <li>하나</li>
+    <li>둘</li>
+    <li>셋</li>
+</ol>
+<ol class="tp">
+    <li>하나</li>
+    <li>둘</li>
+    <li>셋</li>
+</ol>
+<ul class="tp">
+    <li>하나</li>
+    <li>둘</li>
+    <li>셋</li>
+</ul>
+<ul>
+    <li>하나</li>
+    <li>둘</li>
+    <li>셋</li>
+</ul>
+<!-- ol,ul 모두 블록태그 / li 하나하나가 수납장이라고 생각하면 편할듯 -->
+    <!-- 
+      ▪ ol : 순서가 있는 리스트
+      ▪ ul : 순서가 없는 리스트
+      ▪ dl : 정의 리스트
+
+      <ol></ol>
+      1. Order List의 약자로 순서 목록을 정의할 때 사용하는 태그이다. 
+      2. 자식 요소로 반드시 <li>태그를 정의해 주어야 하며
+        <li>태그 이외의 다른 태그는 자식 요소로 올 수 없다.
+
+      <ul></ul>
+      1. Unorder List의 약자로 비순서 목록을 정의할 때 사용하는 태그이다. 
+      2. 자식 요소로 반드시 <li>태그를 정의해 주어야 하며 <li>태그 이외의 다른 태그는 자식 요소로 올 수 없다.
+
+      <li></li>
+      1. List Items로 항목을 정의할 때 사용하는 태그로<ol>, <ul> 태그의 자식요소이다. 
+        2. 텍스트, 인라인 요소, 블록 레벨 요소를 모두 포함할 수 있다.
+
+      <dl></dl>
+      1. Description List의 약자로 용어에 대한 설명 목록을 정의할 때 사용하는 태그이다. 2. 자식 요소로 반드시 <dt>태그와 <dd> 태그를 정의해 주어야 하며 <dl>-><dt>-><dd>순으로 마크업 해야 한다.
+        <dl>태그는 <dt>,<dd> 이외의 태그는 자식요소로 올 수 없지만 <dt>,<dd>을 한 쌍으로 묶는 <div> 태그는 예외적으로 올 수 있다.
+
+      <dt></dt>
+      1. Description Term의 약자로 설명 목록의 용어를 정의한다. 
+      2. 텍스트, 인라인 요소, 블록 레벨 요소를 모두 포함할 수 있다.
+
+      <dd></dd>
+      1. Description Details의 약자로 용어에 대한 세부 설명을 정의한다. 
+      2. 텍스트, 인라인 요소, 블록 레벨 요소를 모두 포함할 수 있다.
+
+     -->
+
+     <h1>발&nbsp;표&nbsp;회</h1>
+     <ul class="p1">
+        <li><ol>
+            <li>햇님반</li>
+            <li>별님반</li>
+            <li>달님반</li>
+            <li>꽃님반</li>
+        </ol></li>
+        <li>햇님반 주제 노래 합창</li>
+        <li>별님반 주제 민속 무용</li>
+        <li>달님반 주제 에어 로빅</li>
+        <li>꽃님반 주제 단체 합주</li>
+     </ul>
+     <ul class="p2">
+        <li> 참가팀 순서
+            <ul class="f1">
+                <li>햇님반</li>
+                <li>별님반</li>
+                <li>달님반</li>
+                <li>꽃님반</li>
+        </ul>
+    </li>
+        <li>햇님반 주제 노래 합창</li>
+        <li>별님반 주제 민속 무용</li>
+        <li>달님반 주제 에어 로빅</li>
+        <li>꽃님반 주제 단체 합주</li>
+     </ul>
+  </body>
+</html>

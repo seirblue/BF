@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>img태그</title>
+  </head>
+  <body>
+    <p><h3>img태그</h3></p>
+    <img src="./images/menu1.jpg" alt="메뉴1" width="50" height="50" />
+    <img src="./images/menu2.jpg" alt="메뉴2" style="width: 50px" />
+    <!--style로 지정하면 픽셀 단위 입력 필요-->
+    <img src="./images/menu3.jpg" alt="메뉴3" />
+    <img src="./images/photo1.jpg" alt="photo1" width="50" height="50" />
+    <!-- 보통은 직접 style 지정을 하지 않음 / 수정할때 일일이 하나씩 수정해야하기때문 -->
+    <!-- 상대주소 (같은 폴더 안에 파일이 있을때) -->
+    <img
+      src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png"
+      alt="다음로고"
+    />
+    <!-- 절대주소 (외부 링크에서 주소를 복사해서 사용 가능) -->
+
+    <a href="http://www.daum.net">다음</a>
+    <a href="http://www.daum.net"
+      ><img
+        src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png"
+        alt="다음로고"
+    /></a>
+    <p>
+      <a href=""><img src="images/map.jpg" alt="지도" /></a>
+    </p>
+    <img src="./images/map.jpg" alt="지도" usemap="#korea" />
+    <map name="korea">
+      <area
+        shape="rect"
+        coords="144,248,186,301"
+        href="https://www.daejeon.go.kr/"
+        alt="대전광역시"
+        target="new"
+      />
+      <area
+        shape="circle"
+        coords="92,523,30"
+        href="https://www.jeju.go.kr/index.htm"
+        alt="제주도"
+      />
+      <area
+        shape="poly"
+        coords="160,255,143,287,176,183"
+        href="https://www.daejeon.go.kr/"
+        alt="대전광역시"
+      />
+      <area
+        shape="poly"
+        coords="178,368,200,432,278,409,318,375,397,346,256,341"
+        href="https://www.daejeon.go.kr/"
+        alt="대전광역시"
+      />
+    </map>
+    <!-- 이미지태그 하나에 맵을 설정할때 여러개를 설정할거면 area로 추가하면 되고 여러개의 id는 설정할 수 없음, 이미지 자체는 class 설정 가능해도 usemap에서는 #이름 설정하면 map name에서 동일한 이름으로 설정해야될것같음. -->
+
+    <p><h3>picture</h3></p>
+
+    <!-- picture태그 안에 지원하지않는 브라우저에서 출력되게하려면 마지막에 img태그를 입력
+    다양한 장치 또는 화면 크기에 대해 다른 그림을 표시할
+수 있다. -->
+    <picture>
+      <source media="(min-width:1200px)" srcset="images/photo1.jpg" />
+      <source media="(min-width:1024px)" srcset="images/photo2.jpg" />
+      <source media="(min-width:768px)" srcset="images/photo3.jpg" />
+      <source media="(min-width:500px)" srcset="images/photo4.jpg" />
+      <img src="./images/photo1.jpg" alt="photo1" />
+    </picture>
+
+    <p><h3>리스트태그</h3></p>
+
+    <!-- 
+      ▪ ol : 순서가 있는 리스트
+      ▪ ul : 순서가 없는 리스트
+      ▪ dl : 정의 리스트
+
+      <ol></ol>
+      1. Order List의 약자로 순서 목록을 정의할 때 사용하
+는 태그이다. 2. 자식 요소로 반드시 <li>태그를 정의해 주어야 하며
+<li>태그 이외의 다른 태그는 자식 요소로 올 수 없
+다.
+
+      <ul></ul>
+      1. Unorder List의 약자로 비순서 목록을 정의할 때 사
+용하는 태그이다. 2. 자식 요소로 반드시 <li>태그를 정의해 주어야 하며
+<li>태그 이외의 다른 태그는 자식 요소로 올 수 없
+다.
+
+      <li></li>
+      1. List Items로 항목을 정의할 때 사용하는 태그로
+<ol>, <ul> 태그의 자식요소이다. 2. 텍스트, 인라인 요소, 블록 레벨 요소를 모두 포함할
+수 있다.
+
+      <dl></dl>
+      1. Description List의 약자로 용어에 대한 설명 목록을
+정의할 때 사용하는 태그이다. 2. 자식 요소로 반드시 <dt>태그와 <dd> 태그를 정의
+해 주어야 하며 <dl>-><dt>-><dd>순으로 마크업
+해야 한다. <dl>태그는 <dt>,<dd> 이외의 태그는
+자식요소로 올 수 없지만 <dt>,<dd>을 한 쌍으로
+묶는 <div> 태그는 예외적으로 올 수 있다.
+
+      <dt></dt>
+      1. Description Term의 약자로 설명 목록의 용어를 정
+의한다. 2. 텍스트, 인라인 요소, 블록 레벨 요소를 모두 포함할
+수 있다.
+
+      <dd></dd>
+      1. Description Details의 약자로 용어에 대한 세부 설명
+을 정의한다. 2. 텍스트, 인라인 요소, 블록 레벨 요소를 모두 포함할
+수 있다.
+
+     -->
+
+  </body>
+</html>

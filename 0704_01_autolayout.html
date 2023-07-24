@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>auto layout</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Arial, "맑은 고딕", sans-serif;
+      }
+      .col{
+        width: calc(180px * 4 + 60px);
+        margin: 0 auto;
+        /* overflow: hidden;
+        background: #ccc; */
+      }
+      .col > div{
+        float: left;
+        margin-left: 20px;
+      }
+      .col > div:first-child{
+        margin-left: 0;
+      }
+      .user {
+        width: 180px;
+        height: 180px;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .title {
+        width: 180px;
+        height: 35px;
+        background: #c9c8ff;
+        border-radius: 10px;
+        font-size: 20px;
+        color: #fff;
+        margin: 10px 0;
+      }
+      .title p{
+        line-height: 35px;
+        /* 글자랑 이미지 수직정렬 */
+      }
+      .title p:first-child {
+        float: left;
+        margin-left: 20px;
+      }
+      .title p:last-child {
+        float: right;
+        margin-right: 20px;
+      }
+      .title img{
+        vertical-align: middle;
+      }
+      .desc{
+        width: 180px;
+        font-size: 12px;
+        text-indent: 10px;
+        display: -webkit-box;
+         -webkit-line-clamp: 3;
+         -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+        <div class="col">
+          <div>
+            <p class="user"><img src="/images/user02.png" alt="user01" /></p>
+            <div class="title">
+              <p>List Title</p>
+              <p><img src="/images/arrow.png" alt="arrow" /></p>
+            </div>
+            <p class="desc">내용이 표준 폰트, 폰트, 타이포그래피, 차지하는 부르며, 부르며, 시각 부르며, 보여줄 무언가를 내용이 용어로도 사용된다. 공간만 입숨은 전에 로렘 그래픽 로렘 채워지기 부르며, 입숨은 공간만 그리킹이라고도 표준 용어로도 용어로도 분야에서 모형의 용어로도 문장 로렘 레이아웃 때로</p>
+          </div>
+          <div>
+            <p class="user"><img src="/images/user03.jpg" alt="user01" /></p>
+            <div class="title">
+              <p>List Title</p>
+              <p><img src="/images/arrow.svg" alt="arrow" /></p>
+            </div>
+            <p class="desc">내용이 표준 폰트, 폰트, 타이포그래피, 차지하는 부르며, 부르며, 시각 부르며, 보여줄 무언가를 내용이 용어로도 사용된다. 공간만 입숨은 전에 로렘 그래픽 로렘 채워지기 부르며, 입숨은 공간만 그리킹이라고도 표준 용어로도 용어로도 분야에서 모형의 용어로도 문장 로렘 레이아웃 때로</p>
+          </div>
+          <div>
+            <p class="user"><img src="/images/user01.jpg" alt="user01" /></p>
+            <div class="title">
+              <p>List Title</p>
+              <p><img src="/images/arrow.png" alt="arrow" /></p>
+            </div>
+            <p class="desc">내용이 표준 폰트, 폰트, 타이포그래피, 차지하는 부르며, 부르며, 시각 부르며, 보여줄 무언가를 내용이 용어로도 사용된다. 공간만 입숨은 전에 로렘 그래픽 로렘 채워지기 부르며, 입숨은 공간만 그리킹이라고도 표준 용어로도 용어로도 분야에서 모형의 용어로도 문장 로렘 레이아웃 때로</p>
+          </div>
+          <div>
+            <p class="user"><img src="/images/user01.jpg" alt="user01" /></p>
+            <div class="title">
+              <p>List Title</p>
+              <p><img src="/images/arrow.png" alt="arrow" /></p>
+            </div>
+            <p class="desc">내용이 표준 폰트, 폰트, 타이포그래피, 차지하는 부르며, 부르며, 시각 부르며, 보여줄 무언가를 내용이 용어로도 사용된다. 공간만 입숨은 전에 로렘 그래픽 로렘 채워지기 부르며, 입숨은 공간만 그리킹이라고도 표준 용어로도 용어로도 분야에서 모형의 용어로도 문장 로렘 레이아웃 때로</p>
+          </div>
+        </div>
+        <div class="col">
+            <div>
+              <p class="user"><img src="/images/user01.jpg" alt="user01" /></p>
+              <div class="title">
+                <p>List Title</p>
+                <p><img src="/images/arrow.png" alt="arrow" /></p>
+              </div>
+              <p class="desc">내용이 표준 폰트, 폰트, 타이포그래피, 차지하는 부르며, 부르며, 시각 부르며, 보여줄 무언가를 내용이 용어로도 사용된다. 공간만 입숨은 전에 로렘 그래픽 로렘 채워지기 부르며, 입숨은 공간만 그리킹이라고도 표준 용어로도 용어로도 분야에서 모형의 용어로도 문장 로렘 레이아웃 때로</p>
+            </div>
+            <div>
+              <p class="user"><img src="/images/user01.jpg" alt="user01" /></p>
+              <div class="title">
+                <p>List Title</p>
+                <p><img src="/images/arrow.svg" alt="arrow" /></p>
+              </div>
+              <p class="desc">내용이 표준 폰트, 폰트, 타이포그래피, 차지하는 부르며, 부르며, 시각 부르며, 보여줄 무언가를 내용이 용어로도 사용된다. 공간만 입숨은 전에 로렘 그래픽 로렘 채워지기 부르며, 입숨은 공간만 그리킹이라고도 표준 용어로도 용어로도 분야에서 모형의 용어로도 문장 로렘 레이아웃 때로</p>
+            </div>
+            <div>
+              <p class="user"><img src="/images/user01.jpg" alt="user01" /></p>
+              <div class="title">
+                <p>List Title</p>
+                <p><img src="/images/arrow.png" alt="arrow" /></p>
+              </div>
+              <p class="desc">내용이 표준 폰트, 폰트, 타이포그래피, 차지하는 부르며, 부르며, 시각 부르며, 보여줄 무언가를 내용이 용어로도 사용된다. 공간만 입숨은 전에 로렘 그래픽 로렘 채워지기 부르며, 입숨은 공간만 그리킹이라고도 표준 용어로도 용어로도 분야에서 모형의 용어로도 문장 로렘 레이아웃 때로</p>
+            </div>
+            <div>
+              <p class="user"><img src="/images/user01.jpg" alt="user01" /></p>
+              <div class="title">
+                <p>List Title</p>
+                <p><img src="/images/arrow.png" alt="arrow" /></p>
+              </div>
+              <p class="desc">내용이 표준 폰트, 폰트, 타이포그래피, 차지하는 부르며, 부르며, 시각 부르며, 보여줄 무언가를 내용이 용어로도 사용된다. 공간만 입숨은 전에 로렘 그래픽 로렘 채워지기 부르며, 입숨은 공간만 그리킹이라고도 표준 용어로도 용어로도 분야에서 모형의 용어로도 문장 로렘 레이아웃 때로</p>
+            </div>
+          </div>
+          <div class="col">
+            <div>
+              <p class="user"><img src="/images/user01.jpg" alt="user01" /></p>
+              <div class="title">
+                <p>List Title</p>
+                <p><img src="/images/arrow.png" alt="arrow" /></p>
+              </div>
+              <p class="desc">내용이 표준 폰트, 폰트, 타이포그래피, 차지하는 부르며, 부르며, 시각 부르며, 보여줄 무언가를 내용이 용어로도 사용된다. 공간만 입숨은 전에 로렘 그래픽 로렘 채워지기 부르며, 입숨은 공간만 그리킹이라고도 표준 용어로도 용어로도 분야에서 모형의 용어로도 문장 로렘 레이아웃 때로</p>
+            </div>
+            <div>
+              <p class="user"><img src="/images/user01.jpg" alt="user01" /></p>
+              <div class="title">
+                <p>List Title</p>
+                <p><img src="/images/arrow.svg" alt="arrow" /></p>
+              </div>
+              <p class="desc">내용이 표준 폰트, 폰트, 타이포그래피, 차지하는 부르며, 부르며, 시각 부르며, 보여줄 무언가를 내용이 용어로도 사용된다. 공간만 입숨은 전에 로렘 그래픽 로렘 채워지기 부르며, 입숨은 공간만 그리킹이라고도 표준 용어로도 용어로도 분야에서 모형의 용어로도 문장 로렘 레이아웃 때로</p>
+            </div>
+            <div>
+              <p class="user"><img src="/images/user01.jpg" alt="user01" /></p>
+              <div class="title">
+                <p>List Title</p>
+                <p><img src="/images/arrow.png" alt="arrow" /></p>
+              </div>
+              <p class="desc">내용이 표준 폰트, 폰트, 타이포그래피, 차지하는 부르며, 부르며, 시각 부르며, 보여줄 무언가를 내용이 용어로도 사용된다. 공간만 입숨은 전에 로렘 그래픽 로렘 채워지기 부르며, 입숨은 공간만 그리킹이라고도 표준 용어로도 용어로도 분야에서 모형의 용어로도 문장 로렘 레이아웃 때로</p>
+            </div>
+            <div>
+              <p class="user"><img src="/images/user01.jpg" alt="user01" /></p>
+              <div class="title">
+                <p>List Title</p>
+                <p><img src="/images/arrow.png" alt="arrow" /></p>
+              </div>
+              <p class="desc">내용이 표준 폰트, 폰트, 타이포그래피, 차지하는 부르며, 부르며, 시각 부르며, 보여줄 무언가를 내용이 용어로도 사용된다. 공간만 입숨은 전에 로렘 그래픽 로렘 채워지기 부르며, 입숨은 공간만 그리킹이라고도 표준 용어로도 용어로도 분야에서 모형의 용어로도 문장 로렘 레이아웃 때로</p>
+            </div>
+          </div>
+          <div class="col">
+            <div>
+              <p class="user"><img src="/images/user01.jpg" alt="user01" /></p>
+              <div class="title">
+                <p>List Title</p>
+                <p><img src="/images/arrow.png" alt="arrow" /></p>
+              </div>
+              <p class="desc">내용이 표준 폰트, 폰트, 타이포그래피, 차지하는 부르며, 부르며, 시각 부르며, 보여줄 무언가를 내용이 용어로도 사용된다. 공간만 입숨은 전에 로렘 그래픽 로렘 채워지기 부르며, 입숨은 공간만 그리킹이라고도 표준 용어로도 용어로도 분야에서 모형의 용어로도 문장 로렘 레이아웃 때로</p>
+            </div>
+            <div>
+              <p class="user"><img src="/images/user01.jpg" alt="user01" /></p>
+              <div class="title">
+                <p>List Title</p>
+                <p><img src="/images/arrow.svg" alt="arrow" /></p>
+              </div>
+              <p class="desc">내용이 표준 폰트, 폰트, 타이포그래피, 차지하는 부르며, 부르며, 시각 부르며, 보여줄 무언가를 내용이 용어로도 사용된다. 공간만 입숨은 전에 로렘 그래픽 로렘 채워지기 부르며, 입숨은 공간만 그리킹이라고도 표준 용어로도 용어로도 분야에서 모형의 용어로도 문장 로렘 레이아웃 때로</p>
+            </div>
+            <div>
+              <p class="user"><img src="/images/user01.jpg" alt="user01" /></p>
+              <div class="title">
+                <p>List Title</p>
+                <p><img src="/images/arrow.png" alt="arrow" /></p>
+              </div>
+              <p class="desc">내용이 표준 폰트, 폰트, 타이포그래피, 차지하는 부르며, 부르며, 시각 부르며, 보여줄 무언가를 내용이 용어로도 사용된다. 공간만 입숨은 전에 로렘 그래픽 로렘 채워지기 부르며, 입숨은 공간만 그리킹이라고도 표준 용어로도 용어로도 분야에서 모형의 용어로도 문장 로렘 레이아웃 때로</p>
+            </div>
+            <div>
+              <p class="user"><img src="/images/user01.jpg" alt="user01" /></p>
+              <div class="title">
+                <p>List Title</p>
+                <p><img src="/images/arrow.png" alt="arrow" /></p>
+              </div>
+              <p class="desc">내용이 표준 폰트, 폰트, 타이포그래피, 차지하는 부르며, 부르며, 시각 부르며, 보여줄 무언가를 내용이 용어로도 사용된다. 공간만 입숨은 전에 로렘 그래픽 로렘 채워지기 부르며, 입숨은 공간만 그리킹이라고도 표준 용어로도 용어로도 분야에서 모형의 용어로도 문장 로렘 레이아웃 때로</p>
+            </div>
+          </div>
+    </div>
+  </body>
+</html>

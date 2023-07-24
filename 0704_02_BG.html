@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background</title>
+    <style>
+      p,
+      span {
+        background-color: #ccc;
+      }
+      div{
+        width: 500px;
+        height: 500px;
+        border: 1px solid;
+        /* background-color: lavender; 색상의 이름이 정해져있는건 140개정도가 전부
+        opacity: 0.5; */
+        /* background-color: rgba(230, 170, 255, 0.5); */
+        /* background-color: hsla(270, 100%, 50%, .7); */
+        background-image: url(/images/photo1.jpg);
+        background-position: center;
+        /* background-position: 100% 100%; */
+        /* background-position: center bottom; */
+        /* 기본 포지션이 왼쪽 상단 (left, top) */
+        background-size: 500px 500px;
+        /* background-size: contain; */
+        /* background-size: cover; */
+        /* 큰 비율에 맞출때는 cover, 작은 비율에 맞출때는 contain */
+        /* background-size: 50px 30px; */
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <p>문단태그</p>
+    <span>인라인태그</span>
+    <div></div>
+  </body>
+</html>

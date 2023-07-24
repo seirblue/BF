@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>블록요소크기</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        background-color: #ccc;
+        padding: 50px;
+        width: 500px;
+        border: 10px solid #000;
+      }
+      /* width값을 지정하지 않아도 기본이 width:auto = default
+      border,padding이 포함된 크기 */
+      ul {
+        width: 500px;
+        background: #f00;
+      }
+      li {
+        padding: 50px;
+        background: #0f0;
+        opacity: 0.5;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>문단태그</p>
+    <ul>
+      <li>리스트</li>
+    </ul>
+  </body>
+</html>

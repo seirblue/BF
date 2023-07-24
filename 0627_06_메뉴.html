@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        list-style: none;
+        /* border-top: 1px solid #000;
+        border-bottom: 1px solid #000; */
+        border: 1px solid #000;
+        border-left: none;
+        border-right: none;
+        text-align: center;
+      }
+      li {
+        display: inline-block;
+        width: 100px;
+        height: 50px;
+        line-height: 50px;
+        /* padding: 20px; */
+      }
+      a {
+        display: block;
+        width: 100%;
+        /* 여기서 100%는 부모요소에서 width값을 100px을 부여했을때 자식요소에서 100px를 %로 계산해서 사용한다는 의미 */
+        height: 100%;
+        color: #000;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      a:hover {
+        /* color: #8ac007; */
+        background: #8ac007;
+        /* text-decoration: underline; */
+      }
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a href="#">home</a></li>
+      <li><a href="#">menu1</a></li>
+      <li><a href="#">menu2</a></li>
+      <li><a href="#">menu3</a></li>
+      <li><a href="#">menu4</a></li>
+    </ul>
+    <!-- 부모요소의 속성을 자식요소가 그대로 가질 수 있음 (상속 inherit?) -->
+    <h1>Homepage입니다</h1>
+  </body>
+</html>

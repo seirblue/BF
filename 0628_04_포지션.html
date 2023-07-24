@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        position: relative;
+        /* left: 100px;
+        top: 100px; */
+        width: 500px;
+        height: 500px;
+        border: 1px solid #000;
+        /* right: 100px; */
+        /* top이나 bottom 둘중 하나만 */
+      }
+      ul:nth-child(2) {
+        position: absolute;
+        /* left: 100px;
+        top: 100px; */
+        /* 현재 ul의 부모요소가 div이기때문에 ul에 position과 이동값을 부여했을 때 부모요소 안에서 이동한것 */
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+        list-style: none;
+        opacity: 0.5;
+        top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <div>
+      <ul>
+        <li><a href="#">링크태그1</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">링크태그2</a></li>
+      </ul>
+      <p>새로운 콘텐츠 새로운 콘텐츠 새로운 콘텐츠 새로운 콘텐츠</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .wrap {
+        display: table-cell;
+        width: 100vw;
+        /* vw 가로크기값을 100등분으로 계산해서 100을 크기로 지정*/
+        height: 100vh;
+        /* vh 세로크기값을 100등분으로 계산해서 100을 크기로 지정 */
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid #000;
+        /* margin-top: 200px; */
+      }
+      .inner {
+        display: inline-block;
+        width: 500px;
+        height: 500px;
+        background: #ccc;
+        /* margin: 0 auto; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="inner"></div>
+    </div>
+  </body>
+</html>

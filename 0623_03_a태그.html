@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* HTML 링크 색상
+기본적으로 링크는 모든 브라우저에 다음과 같이 표시됩니다. 방문하지 않은 링크에 밑줄이 그어지고 파란색으로 표시됩니다. 방문한 링크에 밑줄이 그어지고 자주색이 표시됩니다. 활성 링크에 밑줄이 그어지고 빨간색으로 표시됩니다. */
+      a:link {
+        color: green;
+        text-decoration: none;
+      }
+      /* 링크의 기본색상 */
+      a:visited {
+        color: pink;
+      }
+      /* 방문한 링크의 색상 */
+      a:hover {
+        color: red;
+        text-decoration: underline;
+      }
+      /* 마우스 커서가 위에 올라가있을때의 색상 */
+      a:active {
+        color: yellow;
+      }
+      /* 링크가 클릭될때의 색상 */
+    </style>
+  </head>
+  <body>
+    <a href="#">링크1</a>
+    <a href="#">링크2</a>
+    <a href="#">링크3</a>
+    <a href="#">링크4</a>
+    <a href="#">링크5</a>
+    <p>
+      <a href="mailto:rhkrehs21@gmail.com" title="관리자 이메일입니다"
+        >이메일보내기</a
+      >
+    </p>
+    <!--이렇게하면 해당 이메일 주소로 바로 이메일을 보낼 수 있는 창을 띄워줌
+    title=""을 하면 마우스 커서가 호버링할 때 원하는 문구를 표시할 수 있음-->
+    <img src="images/menu1.jpg" alt="" />
+    <img src="images/menu0.jpg" alt="menu0" />
+    <!--이 경우에는 menu0이라는 이미지가 없어서 해당 이미지가 없을 때 해당 문구를 띄움-->
+    <img src="images/menu2.jpg" alt="" />
+    <img src="images/menu3.jpg" alt="" />
+    <img src="images/menu4.jpg" alt="" />
+    <p><img src="images/menu1.jpg" alt="" /></p>
+    <p><img src="images/menu2.jpg" alt="" /></p>
+    <p><img src="images/menu3.jpg" alt="" /></p>
+    <p><img src="images/menu4.jpg" alt="" /></p>
+    <!--저작권,출처를 밝힐 때 alt에 입력-->
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      #wrap {
+        margin: 0 auto;
+        width: 1200px;
+        overflow: hidden;
+      }
+      .header > div {
+        height: 100px;
+        float: left;
+      }
+      .logo1 {
+        width: 200px;
+        height: 100px;
+        background: rgb(138, 138, 138);
+      }
+      .menu {
+        width: calc(100% - 200px);
+        height: 100px;
+        background: rgb(212, 212, 212);
+      }
+      .image {
+        width: 100%;
+        height: 300px;
+        background: #ccc;
+      }
+      .content > div {
+        height: 200px;
+        float: left;
+      }
+      .galery {
+        width: 33.333%;
+        background: rgb(226, 226, 226);
+      }
+      .banner {
+        width: 33.333%;
+        background: white;
+      }
+      .shortcut {
+        width: 33.333%;
+        background: rgb(128, 128, 128);
+      }
+      .footer > div {
+        height: 100px;
+        float: left;
+      }
+      .logo2 {
+        width: 200px;
+        background: rgb(138, 138, 138);
+      }
+      .copyright {
+        width: calc(100% - 400px);
+        background: rgb(212, 212, 212);
+      }
+      .sns {
+        width: 200px;
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+        <div class="header">
+            <div class="logo1">로고</div>
+            <div class="menu">메뉴</div>
+        </div>
+        <div class="image">이미지슬라이드</div>
+        <div class="content">
+            <div class="galery">공지사항/갤러리</div>
+            <div class="banner">배너</div>
+            <div class="shortcut">바로가기</div>
+        </div>
+        <div class="footer">
+            <div class="logo2">로고</div>
+            <div class="copyright">copyright</div>
+            <div class="sns">sns</div>
+        </div>
+    </div>
+  </body>
+</html>

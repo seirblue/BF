@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrap {
+        /* font-size: 100%; */
+        /* font-size: 200%; */
+        font-size: 180%;
+      }
+      /* 16px=12px=100% */
+      .wrap > div {
+        border: 1px solid #000;
+      }
+      .a {
+        width: 2em;
+      }
+      /* 16*2=32px */
+      .b {
+        font-size: 2em;
+        width: 2em;
+      }
+      .c{
+        width: 2rem;
+      }
+      .d{
+        width: 160px;
+      }
+      .e{
+        width: 10em;
+      }
+      /* body의 font-size가 200%이니까 10em이면 160*2*10=320px */
+      .h {
+        font-size: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="a">a</div>
+      <div class="b">b</div>
+      <div class="c">c</div>
+      <div class="d">d</div>
+      <div class="e">e</div>
+      <div class="h">h</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      #wrap {
+        width: 1280px;
+        margin: 0 auto;
+        background: #ccc;
+      }
+      .header {
+        border: 1px solid;
+        border-radius: 5px;
+        padding: 20px;
+        /* box-sizing을 사용하지 않았는데 1280px에 맞게 나오는 이유는 width값을 부여하지 않았기 때문, width값을 부여하지 않으면 기본이 auto */
+      }
+      .content {
+        margin: 20px 0;
+        overflow: hidden;
+      }
+      .content > div {
+        height: 500px;
+        float: left;
+        border: 1px solid;
+        border-radius: 5px;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      .nav {
+        width: 30%;
+      }
+      .section {
+        width: calc(50% - 40px);
+        margin: 0 20px;
+      }
+      .aside {
+        width: 20%;
+      }
+      .footer {
+        height: 100px;
+        border: 1px solid;
+        border-radius: 5px;
+        padding: 20px;
+        clear: both;
+        /* content > div에 float를 사용했기때문에 부모의 높이값을 잃어버려서 content에 margin을 줘도 footer는 적용받지 못하기때문에 content에 overflow: hidden을 주고 footer에 clear: both */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="header">header</div>
+      <div class="content">
+        <div class="nav">nav</div>
+        <div class="section">section</div>
+        <div class="aside">aside</div>
+      </div>
+      <div class="footer">footer</div>
+    </div>
+    
+  </body>
+</html>

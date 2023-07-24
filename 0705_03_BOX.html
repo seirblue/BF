@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOX</title>
+    <style>
+      p {
+        width: 500px;
+        height: 500px;
+        border: 10px solid;
+        padding: 100px;
+      }
+      p:first-child {
+        box-shadow: 5px 5px 5px 0 rgba(255, 0, 0, 1);
+        /* X좌표 Y좌표 블러 스프레드 색상 순서 */
+      }
+      p:last-of-type {
+        box-shadow: inset 5px 5px 5px 10px rgba(255, 0, 0, 1);
+        /* inset은 내부에 그림자를 줌 */
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <p></p>
+  </body>
+</html>

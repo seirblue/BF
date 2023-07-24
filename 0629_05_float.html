@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .d1 > div {
+        /* width: 40%; */
+        width: 33.333%;
+        float: left;
+        background: lightgray;
+      }
+      .d2 {
+        font-size: 0;
+      }
+      .d2 > div {
+        width: 33.333%;
+        display: inline-block;
+        background: lightgray;
+        font-size: 16px;
+      }
+      .d3 {
+        position: relative;
+      }
+      .d3 > div {
+        width: 33.333%;
+        background: lightgray;
+        position: absolute;
+        top: 0;
+      }
+      .d3 .center {
+        left: 33.333%;
+      }
+      .d3 .right {
+        left: 66.666%;
+      }
+      /* float했을때 가로값의 영향을 받아서 100%를 초과하면 자동으로 개행함 */
+    </style>
+  </head>
+  <body>
+    <div class="d1">
+      <div class="left">left</div>
+      <div class="center">center</div>
+      <div class="right">right</div>
+    </div>
+    <div class="d2">
+      <!-- display:inline-block으로 가로배치 -->
+      <div class="left">left</div>
+      <div class="center">center</div>
+      <div class="right">right</div>
+    </div>
+    <div class="d3">
+      <!-- position으로 가로배치 -->
+      <div class="left">left</div>
+      <div class="center">center</div>
+      <div class="right">right</div>
+    </div>
+  </body>
+</html>

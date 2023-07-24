@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>글자모양</title>
+    <!--스타일 내부방식-->
+    <style>
+      mark {
+        background-color: magenta;
+      }
+      /* 태그에 직접 설정한 스타일은 적용되지 않음 */
+      #first {
+        background-color: beige;
+      }
+      .txt {
+        background-color: #ccc !important;
+      }
+      /* important가 인라인태그보다 더 강력함 */
+      /* Type 선택자 < class 선택자 < id 선택자 < 인라인스타일 < important */
+    </style>
+  </head>
+  <body>
+    <!--텍스트에만 줄수있는 태그-->
+    <p><b>글자 모양 태그의 종류</b></p>
+
+    <p><b>굵은글자</b></p>
+    <p><strong>볼드체</strong></p>
+    <p><i>기울어진 글자</i></p>
+    <p><em>기울어진 글자</em></p>
+    <p><small>작은 글자</small></p>
+    <p>x<sup>2</sup></p>
+    <p>H<sub>2</sub>O</p>
+    <p><ins>밑줄문자</ins></p>
+    <p><del>취소선글자</del></p>
+    <p><mark>하이라이트된 글자</mark></p>
+    <!--이렇게 직접 스타일 설정도 가능-->
+    <!--인라인스타일은 태그에 직접 설정한것이기때문에 CSS로 수정이 안되고 HTML로만 수정 가능해서 잘(거의) 사용하지 않음-->
+    <!-- <p><mark style="background-color: beige">하이라이트된 글자</mark></p> -->
+    <p><mark style="background-color: beige">하이라이트된 글자</mark></p>
+    <!--텍스트에만 줄수있는 태그-->
+    <!--h태그 안에 p태그 안되고 p태그 안에 h태그 안됨-->
+    <!--문법이 안맞지만 실행은 됨-->
+
+    <p><b>HTML 인용 및 인용 요소</b></p>
+
+    <blockquote cite="http://www.naver.com">
+      For 60 years, WWF has worked to help people and nature thrive. As the
+      world's leading conservation organization, WWF works in nearly 100
+      countries. At every level, we collaborate with people around the world to
+      develop and deliver innovative solutions that protect communities,
+      wildlife, and the places in which they live
+    </blockquote>
+    <!--blockquote는 자동으로 들여쓰기가 됨-->
+
+    <p>
+      For 60 years, WWF has worked to help people and nature thrive. As the
+      world's leading conservation organization, WWF works in nearly 100
+      countries. At every level, we collaborate with people around the world to
+      develop and deliver innovative solutions that protect communities,
+      wildlife, and the places in which they live
+
+      <!--blockquote에서 사용할 수 있는 속성-->
+      <!--cite:속성값 (인용된 내용의 출처 source를 명시함)-->
+    </p>
+    <p><b>짧은 인용문의 경우 q</b></p>
+
+    <p>네이버 논문:<q cite="http://www.naver.com">환경 논문</q></p>
+    <!--cite:속성값 (인용된 내용의 출처 source를 명시함)-->
+    <!--q태그에는 쌍따옴표가 자동으로 생성됨-->
+
+    <p><b>약어 abbr</b></p>
+
+    <p>
+      The <abbr title="World Health Organization">WHO</abbr> was founded in
+      1948.
+    </p>
+
+    <p><b>address</b></p>
+    <address>대전광역시 서구 둔산동</address>
+    <p>대전광역시 서구 둔산동</p>
+    <!--address는 기울여져서 출력됨, HTML의 시멘틱 (의미) 요소-->
+
+    <!--마크에 이름을 붙이는 방법-->
+    <!--이건 CSS-->
+    <p>CSS</p>
+    <p>
+      <mark id="first" class="txt">하이라이트된 글자</mark>
+    </p>
+    <p>
+      <mark id="second" class="txt">하이라이트된 글자</mark>
+      <!--id는 중복 불가, class는 중복 가능-->
+      <!--영문자와 숫자 입력 가능하지만 시작은 무조건 영문자로-->
+      <!--ex) AAA01-->
+    </p>
+
+    <p><b>하이퍼링크 (Hyperlink) 태그</b></p>
+    <!-- a (Anchor) : 하이퍼링크를 의미 -->
+    <!-- href(Hypertext Reference) : 파일의 경로(주소) -->
+    <!-- target 속성은 연결된 문서를 열 위치를 지정한다. 
+        _self - 기본값. 클릭한 것과 동일한 창/탭에서 문서를 엽니다. 
+        _blank - 새 창이나 탭에서 문서를 엽니다. 
+        _parent - 상위 프레임에서 문서를 엽니다. 
+        _top - 창의 전체 본문에서 문서를 엽니다. -->
+    <!-- URL (Uniform Resource Locator) -->
+    <!-- - 절대주소 : 경로의 정확한 주소를 표현 -->
+    <!-- - 상대주소 : html 파일과의 상대적인 위치를 표현 -->
+    <!-- <a href="url">link text</a> -->
+    <!-- ex) index.html 파일을 기준으로 a.html 파일을 불러오려고 하는 경우 -->
+
+    <!--HTML 파일 경로
+파일 경로는 웹사이트의 폴더 구조에서 파일의 위치를 설명합니다. 파일 경로는 다음과 같은 외부 파일에 연결할 때 사용됩니다. • 웹 페이지
+• 이미지
+• 스타일 시트
+• 자바스크립트
+▪ 절대주소
+절대 파일 경로
+<img src="https://www.naver.com" alt="naver">
+▪ 상대주소
+상대 파일 경로
+<img src="사진.jpg"> - "picture.jpg" 파일은 현재 페이지와 같은 폴더에 있다. <img src="이미지/그림.jpg"> - "picture.jpg" 파일은 현재 폴더의 이미지 폴더에 있다.(현재
+파일 위치를 기준으로 파일 위치를 표기) ./ : 현재 위치(생략가능)
+<img src="/images/picture.jpg"> - "picture.jpg" 파일은 현재 웹의 루트에 있는 images 폴
+더에 있다. <img src="../picture.jpg"> - "picture.jpg" 파일은 현재 폴더에서 한 단계 위의 폴더에 있다.(현재 위치의 상단 폴더)
+HTML 링크 색상
+기본적으로 링크는 모든 브라우저에 다음과 같이 표시됩니다. 방문하지 않은 링크에 밑줄이 그어지고 파란색으로 표시됩니다. 방문한 링크에 밑줄이 그어지고 자주색이 표시됩니다. 활성 링크에 밑줄이 그어지고 빨간색으로 표시됩니다.-->
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transform</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+        width: 1200px;
+        margin: 0 auto;
+      }
+      a {
+        text-decoration: none;
+      }
+      body {
+        font-family: Arial, "맑은 고딕", sans-serif;
+      }
+      img{
+        width: 300px;
+        height: 200px;
+        margin-bottom: 10px;
+        object-fit: contain;
+      }
+      li p{
+        width: 300px;
+        text-align: center;
+      }
+      li{
+        float: left;
+        border: 1px solid rgba(0, 0, 0, 0);
+        box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.3);
+        padding: 8px;
+        padding-bottom: 20px;
+      }
+      ul li:first-child{
+        transform: rotate(-10deg);
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <div class="box"><img src="/images/photo1.jpg" alt="photo1" /></div>
+        <p>그린컴퓨터아트학원</p>
+      </li>
+      <li>
+        <div class="box"><img src="/images/photo2.jpg" alt="photo2" /></div>
+        <p>그린컴퓨터아트학원</p>
+      </li>
+      <li>
+        <div class="box"><img src="/images/photo3.jpg" alt="photo3" /></div>
+        <p>그린컴퓨터아트학원</p>
+      </li>
+      <li>
+        <div class="box"><img src="/images/photo4.jpg" alt="photo4" /></div>
+        <p>그린컴퓨터아트학원</p>
+      </li>
+    </ul>
+  </body>
+</html>

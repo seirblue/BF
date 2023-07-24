@@ -1,0 +1,100 @@
+@charset "urf-8";
+@font-face {
+  font-family: Apple SD Gothic Neo;
+  src: url(/webfonts/AppleSDGothicNeoR.woff) format("woff");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+.quickmenu1,.quickmenu2,.quickmenu3{
+    width: 1080px;
+    margin: 0 auto;
+}
+.quickmenu1 li{
+    width: calc(100% / 8);
+    float: left;
+    text-align: center;
+    /* background-size: contain; */
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding-top: 50px;
+}
+.quickmenu1 li:first-child{
+    background-image: url(/images/ico-write.png);
+}
+.quickmenu1 li:nth-child(2){
+    background-image: url(/images/ico-eshopping.png);
+}
+.quickmenu1 li:nth-child(3){
+    background-image: url(/images/ico-checkpaper.png);
+}
+.quickmenu1 li:nth-child(4){
+    background-image: url(/images/ico-coin-48.png);
+}
+.quickmenu1 li:nth-child(5){
+    background-image: url(/images/ico-call-48.png);
+}
+.quickmenu1 li:nth-child(6){
+    background-image: url(/images/ico-cardregister-48.png);
+}
+.quickmenu1 li:nth-child(7){
+    background-image: url(/images/ico-point-48.png);
+}
+.quickmenu1 li:nth-child(8){
+    background-image: url(/images/ico-certificate-48.png);
+}
+.quickmenu1 li a{
+    line-height: 20px;
+}
+.quickmenu2 li{
+    float: left;
+    width: calc(100% / 8);
+    text-align: center;
+}
+.quickmenu2 li a{
+    display: block;
+}
+.quickmenu3 {
+    font-size: 0;
+}
+.quickmenu3 a{
+    display: inline-block;
+    width: calc(100% / 8);
+    padding-top: 50px;
+    font-size: 16px;
+    text-align: center;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+.quickmenu3 a:first-child{
+    background-image: url(/images/ico-write.png);
+}
+.quickmenu3 a:nth-child(2){
+    background-image: url(/images/ico-eshopping.png);
+}
+.quickmenu3 a:nth-child(3){
+    background-image: url(/images/ico-checkpaper.png);
+}
+.quickmenu3 a:nth-child(4){
+    background-image: url(/images/ico-coin-48.png);
+}
+.quickmenu3 a:nth-child(5){
+    background-image: url(/images/ico-call-48.png);
+}
+.quickmenu3 a:nth-child(6){
+    background-image: url(/images/ico-cardregister-48.png);
+}
+.quickmenu3 a:nth-child(7){
+    background-image: url(/images/ico-point-48.png);
+}
+.quickmenu3 a:nth-child(8){
+    background-image: url(/images/ico-certificate-48.png);
+}

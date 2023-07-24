@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrap {
+        width: 600px;
+        margin: 0 auto;
+        /* 블록요소는 margin을 100%를 사용함
+        width값이 없을때는 margin: 0 auto;를 해도 적용이 안됨 */
+        border: 1px solid #000;
+      }
+      .wrap div:first-child {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        background: #f00;
+      }
+      .wrap div:nth-child(2) {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background: #00f;
+        left: 300px;
+      }
+      .wrap div:nth-child(3) {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        left: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div>a</div>
+      <div>b</div>
+      <div>c</div>
+    </div>
+  </body>
+</html>
