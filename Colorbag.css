@@ -99,3 +99,50 @@ ul.btn li:hover{
     text-align: center;
     font-size: 12px;
 }
+.notice{
+    width: 999px;
+    margin: 20px auto;
+}
+.notice > ul > li{
+    float: left;
+    width: 33.333%;
+    font-size: 14px;
+}
+.notice > ul > li:first-child li:first-child{
+    margin-bottom: 20px;
+}
+.notice > ul > li:nth-child(2) li{
+    float: left;
+    cursor: pointer;
+}
+.notice > ul > li:nth-child(2) li:first-child:hover{
+    content: url(/images/colorbag/images/csbanner_over.jpg);
+}
+.notice > ul > li:nth-child(2) li:nth-child(2):hover{
+    content: url(/images/colorbag/images/csbanner_over-02.jpg);
+}
+.notice > ul > li:nth-child(2) li:nth-child(3):hover{
+    content: url(/images/colorbag/images/csbanner_over-03.jpg);
+}
+.foot_top{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.foot_top ul{
+    width: 999px;
+    margin: 0 auto;
+}
+.foot_top ul li{
+    float: left;
+}
+.foot_top ul li a{
+    color: #333;
+    font-size: 14px;
+    line-height: 30px;
+    margin-right: 20px;
+}
+.foot_bottom{
+    width: 999px;
+    margin: 20px auto;
+    font-size: 14px;
+}
