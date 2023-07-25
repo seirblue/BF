@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      body {
+        font-family: Arial, "Noto Sans KR", sans-serif;
+      }
+      #wrap {
+        height: 100vh;
+      }
+      .top {
+        display: flex;
+        background: #666;
+      }
+      .top ul {
+        width: 1000px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0 auto;
+      }
+      .top ul li {
+        padding: 10px;
+      }
+      .top ul li a {
+        color: #ccc;
+        font-size: 14px;
+      }
+      .navi {
+        background: #161616;
+      }
+      nav {
+        width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+      }
+      nav > img {
+        margin: 0 auto;
+      }
+      nav ul {
+        width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      nav ul li a {
+        color: white;
+        margin-left: 20px;
+      }
+      .main {
+        background: #161616;
+        padding-bottom: 30px;
+      }
+      .content1 {
+        background: #9a9a9a;
+      }
+      .content1 div {
+        width: 1000px;
+        height: 400px;
+        margin: 0 auto;
+      }
+      .content2 {
+        width: 1000px;
+        margin: 0 auto;
+      }
+      .content2 ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .content2 ul li {
+        padding: 10px;
+      }
+      .content3 {
+        width: 1000px;
+        margin: 0 auto;
+        display: flex;
+      }
+      .content3 img {
+        display: flex;
+        justify-content: flex-start;
+      }
+      .content3 .desc {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+      }
+      .content3 h3 {
+        color: white;
+      }
+      .content3 p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 14px;
+      }
+      footer {
+        background: #161616;
+        color: #ccc;
+        border-top: 1px solid #ccc;
+        font-size: 12px;
+        padding-top: 20px;
+      }
+      .foot {
+        width: 1000px;
+        margin: 0 auto;
+      }
+      .foot ul {
+        display: flex;
+        justify-content: center;
+      }
+      .foot ul li {
+        margin: auto 10px;
+      }
+      .foot p {
+        display: flex;
+        justify-content: center;
+        margin: 6px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="top">
+        <ul>
+          <li><a href="#">LOG IN</a></li>
+          <li><a href="#">JOIN</a></li>
+          <li><a href="#">CUST</a></li>
+          <li>
+            <textarea name="search" id="search" cols="20" rows="2"></textarea>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="/images/madforgarlic/images/zoom.png" alt="zoom"
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <div class="navi">
+        <nav>
+          <img src="/images/madforgarlic/images/mad_12.gif" alt="mad_12" />
+          <ul>
+            <li><a href="#">BRAND</a></li>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">STORE</a></li>
+            <li><a href="#">MEMBERSHIP</a></li>
+            <li><a href="#">EVENT</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="main">
+        <div class="content1">
+          <div>
+            <img src="/images/madforgarlic/images/mad_17.jpg" alt="mad_17" />
+          </div>
+        </div>
+        <div class="content2">
+          <ul>
+            <li>
+              <a href="#"
+                ><img src="/images/madforgarlic/images/mad_25.jpg" alt="mad_25"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="/images/madforgarlic/images/mad_27.jpg" alt="mad_27"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="/images/madforgarlic/images/mad_29.jpg" alt="mad_29"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="/images/madforgarlic/images/mad_31.jpg" alt="mad_31"
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="content3">
+          <img src="/images/madforgarlic/images/mad_39.jpg" alt="mad_39" />
+          <div class="desc">
+            <div class="text">
+              <h3>공지사항</h3>
+              <p>
+                <b>MAD SURPRISE</b>&nbsp;&nbsp;&nbsp;&nbsp; 매월 지정일
+                매드서프라이즈! 2017-06-28<br />
+                <b>MAD CELEBRATION</b>&nbsp;&nbsp; 생일, 결혼기념일 스페셜!
+                2017-06-28<br />
+                <b>MAD DAY</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 매월 마지막
+                주 수요일 기억하세요! 2017-06-28<br />
+                <b>MAD 10%</b>&nbsp;&nbsp;&nbsp; 멤버십이라면 언제나 10%
+                할인제공! 2017-06-28<br />
+                <b>MAD REWARDS</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 올수록
+                커지는 리워즈 혜택! 2017-06-28
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="foot">
+          <ul>
+            <li>서비스이용약관</li>
+            <li>개인정보처리방침</li>
+            <li>기기운영관리방침</li>
+            <li>고객서비스센터</li>
+            <li>관리자문의</li>
+          </ul>
+          <p>서울특별시 강남구 압구정로 222(신사동) ㈜엠에프지코리아</p>
+          <p>COPYRIGHT ⓒ MFGKOREA ALL RIGHTS RESERVED.</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
