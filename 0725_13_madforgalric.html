@@ -5,116 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>flex</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      ul {
-        list-style: none;
-      }
-      a {
-        text-decoration: none;
-      }
-      body {
-        font-family: Arial, "Noto Sans KR", sans-serif;
-        background: #161616;
-      }
-      .top{
-        background: #666;
-      }
-      .top .topmenu{
-        width: 100%;
-        max-width: 1000px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: flex-end;
-      }
-      .top .topmenu ul{
-        display: flex;
-        align-items: center;
-        height: 30px;
-      }
-      .top .topmenu ul li{
-        margin-left: 10px;
-      }
-      .top .topmenu ul li img{
-        vertical-align: middle;
-      }
-      .top .topmenu ul li a{
-        color: #fff;
-        text-transform: uppercase;
-        font-size: 14px;
-      }
-      :focus{
-        outline: none;
-      }
-      .head{
-        width: 100%;
-        max-width: 1000px;
-        height: 70px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-      }
-      .head ul{
-        display: flex;
-        align-items: center;
-      }
-      .head ul li a{
-        width: 100%;
-        line-height: 70px;
-        display: block;
-        color: #fff;
-        text-transform: uppercase;
-        font-size: 20px;
-        padding: 0 20px;
-        box-sizing: border-box;
-      }
-      .head ul li a:hover{
-        background: #fff;
-        color: #161616;
-      }
-      .visual{
-        height: 400px;
-        background: #9a9a9a;
-      }
-      .visual .madimg{
-        width: 100%;
-        max-width: 1000px;
-        margin: 0 auto;
-      }
-      ul.banner{
-        width: 100%;
-        max-width: 1000px;
-        margin: 20px auto;
-        display: flex;
-        justify-content: space-between;
-      }
-      .event{
-        width: 100%;
-        max-width: 1000px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-      }
-      .event .right{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #fff;
-        flex: 1;
-      }
-      .event .right h2{
-        margin-bottom: 20px;
-      }
-      .event .right b{
-        margin-right: 10px;
-      }
-      .event .right span{
-        margin-left: 10px;
-      }
-    </style>
+    <link rel="stylesheet" href="madforgalic.css">
   </head>
   <body>
     <div id="wrap">
@@ -124,7 +15,7 @@
                     <li><a href="#">log in</a></li>
                     <li><a href="#">join</a></li>
                     <li><a href="#">guest</a></li>
-                    <li><input type="search" placeholder="검색어를 입력해 주세요."></li>
+                    <li><input type="search" placeholder="검색어를 입력해 주세요." onfocus="this.placeholder=''"></li>
                     <li><a href="#"><img src="/images/madforgarlic/images/zoom.png" alt="zoom"></a></li>
                 </ul>
             </div>
@@ -161,6 +52,19 @@
                 </div>
             </div>
         </div>
+        <footer>
+          <div class="foot">
+            <ul>
+              <li><a href="#">서비스이용약관</a></li>
+              <li><a href="#">개인정보처리방침</a></li>
+              <li><a href="#">기기운영관리방침</a></li>
+              <li><a href="#">고객서비스센터</a></li>
+              <li><a href="#">관리자문의</a></li>
+            </ul>
+            <p>서울특별시 강남구 압구정로 222(신사동) ㈜엠에프지코리아</p>
+            <p>COPYRIGHT ⓒ MFGKOREA ALL RIGHTS RESERVED.</p>
+          </div>
+        </footer>
     </div>
   </body>
 </html>
