@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font-family: "나눔 고딕", sans-serif;
+      }
+      header {
+        border-bottom: 1px solid #ccc;
+      }
+      .head {
+        width: 990px;
+        margin: 20px auto;
+        text-align: center;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .head .top {
+        width: calc(50% + 47.5px);
+        display: flex;
+        justify-content: space-between;
+      }
+      .head .top ul {
+        display: flex;
+        align-items: center;
+      }
+      .head .top ul li {
+        margin-left: 20px;
+      }
+      nav {
+        width: 800px;
+        margin: 0 auto;
+      }
+      nav ul {
+        display: flex;
+        justify-content: space-between;
+      }
+      nav > ul > li > a {
+        font-size: 18px;
+        line-height: 50px;
+      }
+      .slide {
+        width: 1600px;
+        height: 520px;
+        margin: 0 auto;
+        animation: slide 4s infinite both;
+      }
+      @keyframes slide {
+        0% {
+          background: url(/images/happybath2/221102_final_micro-micellar-low-pH-deep-cleansing-foam_main_kv_desktop.jpg);
+        }
+        40% {
+          background: url(/images/happybath2/221121_final_natural-cleansing-foam_desktop.jpg);
+        }
+        70% {
+          background: url(/images/happybath2/20220413_final_matinee-perfume-bodywash_main_kv_pc.jpg);
+        }
+        100% {
+          background: url(/images/happybath2/20220413_final_original-collection-bodywash_main_kv_pc.jpg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div class="head">
+          <div class="top">
+            <div class="logo">
+              <a href="#"><img src="/images/happybath2/logo.png" alt="logo" /></a>
+            </div>
+            <ul>
+              <li><a href="#">로그인</a></li>
+              <li><a href="#">구매하기</a></li>
+              <li><a href="#">매장찾기</a></li>
+              <li>
+                <a href="#"
+                  ><span class="material-symbols-outlined"> search </span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">해피바스 이야기</a></li>
+            <li><a href="#">해피바스 선물</a></li>
+            <li><a href="#">해피바스 뷰티톡</a></li>
+            <li><a href="#">해피바스 제품</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="slide"></div>
+    </div>
+  </body>
+</html>
