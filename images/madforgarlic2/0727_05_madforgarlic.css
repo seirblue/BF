@@ -1,0 +1,62 @@
+@charset= "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+body {
+  font-family: "Open Sans", "Noto Sans KR", sans-serif;
+}
+#wrap {
+  width: 1504px;
+  margin: 0 auto;
+}
+.left_top {
+  position: relative;
+  width: 506px;
+  height: 492px;
+  background: url(/images/madforgarlic2/left_top_bg.png);
+  background-size: 100%;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  transition: 0.5s;
+}
+.left_top:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  background-size: 125%;
+  background-position: center;
+}
+.left_top .close-up {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  transition: 0.8s;
+}
+.left_top:hover .close-up {
+  top: 40%;
+}
+.left_top .close-up span,
+.left_top .close-up a {
+  color: #fff;
+  font-weight: bold;
+  font-size: 17px;
+}
+.left_top .close-up p:first-child,
+.left_top .close-up a {
+  opacity: 0;
+  transition: 0.8s;
+}
+.left_top:hover .close-up p:first-child,
+.left_top:hover .close-up a {
+  opacity: 1;
+}
