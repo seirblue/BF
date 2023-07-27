@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font-family: Arial, 나눔고딕, sans-serif;
+      }
+      .bestitem {
+        width: 1600px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: url(/images/happybath2/item-bg.png) 0 90% repeat-x;
+        text-align: center;
+      }
+      .bestitem h1{
+        position: relative;
+        width: 50%;
+        margin: 0 auto;
+        font-size: 20px;
+      }
+      .bestitem h1::before{
+        position: absolute;
+        content: "";
+        width: 200px;
+        height: 1px;
+        background: #ccc;
+        left: 0;
+        top: 14px;
+      }
+      .bestitem h1::after{
+        position: absolute;
+        content: "";
+        width: 200px;
+        height: 1px;
+        background: #ccc;
+        right: 0;
+        top: 14px;
+      }
+      .bestitem ul {
+        display: flex;
+        justify-content: center;
+      }
+      .bestitem ul li{
+        width: 220px;
+        cursor: pointer;
+      }
+      .bestitem ul li p{
+        letter-spacing: -3px;
+        margin: 10px;
+      }
+      .bestitem ul li img{
+        transform: scale(1);
+        transition: 0.5s;
+      }
+      .bestitem ul li:hover img{
+        transform: scale(1.05);
+      }
+      .bestitem ul li:hover p{
+        font-weight: 550;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bestitem">
+      <h1>베스트셀러 아이템</h1>
+      <ul>
+        <li>
+          <img
+            src="/images/happybath2/20220608_micro-micellar_deep-cleansing_front(120x300)_1.png"
+            alt="deepcleansing" />
+          <p>해피바스 마이크로미셀라<br />딥 클렌징폼</p>
+        </li>
+        <li>
+          <img
+            src="/images/happybath2/220405_final_Happybath_bestseller_thumbnail01_pc.png"
+            alt="bestseller01" />
+          <p>해피바스 마이크로미셀라<br />딥 클렌징폼</p>
+        </li>
+        <li>
+          <img
+            src="/images/happybath2/220405_final_Happybath_bestseller_thumbnail02_pc.png"
+            alt="bestseller02" />
+          <p>해피바스 마이크로미셀라<br />딥 클렌징폼</p>
+        </li>
+        <li>
+          <img
+            src="/images/happybath2/220405_final_Happybath_bestseller_thumbnail03_pc.png"
+            alt="bestseller03" />
+          <p>해피바스 마이크로미셀라<br />딥 클렌징폼</p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

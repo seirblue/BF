@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font-family: Arial, 나눔고딕, sans-serif;
+      }
+      .product{
+        width: 990px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+      }
+      .product h2{
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .product .review .box{
+        border: 1px solid #ccc;
+        display: flex;
+        justify-content: center;
+      }
+      /* .product .review .box:hover{
+        border: 1px solid #333;
+      } */
+      .product .review .box .picture{
+        background: #E8E2EF;
+      }
+      .product .review .box .desc{
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: justify;
+      }
+      .product .review .box .desc .star{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 10px;
+      }
+      .product .news .box{
+        width: 285px;
+        height: 250px;
+        animation: news 2s infinite both;
+        border: 1px solid transparent;
+      }
+      /* .product .news .box:hover{
+        border: 1px solid #333;
+      } */
+      .product .box:hover{
+        border-color: #333;
+      }
+      @keyframes news{
+        0%{
+            background: url(/images/happybath2/220600_final_Happybath_news-banner_main_pc.jpg) no-repeat;
+        }
+        100%{
+            background: url(/images/happybath2/220405_final_Happybath_news_banner_pc.jpg) no-repeat;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="product">
+        <div class="review">
+            <h2>제품리뷰</h2>
+            <div class="box">
+                <div class="picture"><img src="/images/happybath2/20220523_original-collection_cherry-blossom_231x251.png" alt="cherry-blossom"></div>
+                <div class="desc">
+                    <p>[오리지널컬렉션 체리블로섬 바디워시]</p>
+                    <p class="star">
+                        <span>flrr*****</span>
+                        <span><img src="/images/happybath2/detail-review-star5.png" alt="star5"></span>
+                    </p>
+                    <p>정말 오랜만에 향기도 좋고 성분도 착한 바디워시를 만났어요! 마일드한 세정력도 좋고 저자극의 바디워시입니다.</p>
+                </div>
+            </div>
+        </div>
+        <div class="news">
+            <h2>해피바스 새소식</h2>
+            <div class="box"></div>
+        </div>
+    </div>
+  </body>
+</html>
