@@ -1,4 +1,8 @@
 @charset "UTF-8";
+@font-face {
+  font-family: solid;
+  src: url(/images/paulsmith/webfonts/fa-solid-900.woff2) format("woff2");
+}
 
 * {
   margin: 0;
@@ -26,38 +30,180 @@ body {
   justify-content: space-between;
   color: #fff;
   line-height: 30px;
-  border: 1px solid red;
 }
 .top .topmenu ul {
   display: flex;
 }
-.top .topmenu ul.left{
+.top .topmenu ul.left {
   margin-left: 50px;
 }
-.top .topmenu ul.right{
+.top .topmenu ul.right {
   margin-right: 50px;
 }
 .top .topmenu ul.left li {
-  margin-right: 50px;
+  margin-right: 20px;
 }
 .top .topmenu ul.right li a {
   color: #fff;
   margin-left: 20px;
   text-align: center;
+  font-size: 12px;
 }
-.head{
+.head {
   width: 1903px;
   margin: 20px auto;
   display: flex;
   justify-content: flex-end;
-  border: 1px solid #000;
 }
-.head .head-top{
+.head .head-top {
   width: calc(50% + 98.5px);
   display: flex;
   justify-content: space-between;
 }
-.head .head-top ul{
+.head .head-top ul {
   display: flex;
   margin-right: 50px;
+}
+.menu {
+  width: 1903px;
+  margin: 20px auto 50px;
+  display: flex;
+  justify-content: center;
+}
+.menu ul {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+.menu ul li a {
+  font-size: 12px;
+}
+.menu ul li a::after {
+  content: "\f078";
+  font-family: solid;
+  padding-left: 10px;
+  color: #ccc;
+}
+.gnb{
+  width: 100%;
+  min-width: 1903px;
+  background: #80D4C7;
+}
+.gnb ul{
+  width: 1903px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  line-height: 50px;
+}
+.gnb ul li{
+  margin-left: 100px;
+}
+.gnb ul li:first-child{
+  margin-left: 0;
+}
+.gnb ul li a{
+  text-decoration: underline;
+  font-size: 14px;
+}
+section{
+  width: 1903px;
+  margin: 0 auto;
+}
+section h3{
+  text-align: center;
+  padding: 30px 0;
+  color: #434343;
+  font-weight: normal;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+section ul{
+  display: flex;
+}
+.foot{
+  width: 100%;
+  min-width: 1903px;
+  background: #f8f8f8;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  margin-top: 50px;
+}
+.foot .foot-top{
+  width: 1903px;
+  height: 300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.foot .foot-top > ul{
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+.foot .foot-top > ul > li{
+  /* width: 25%; */
+}
+.foot .foot-top > ul > li > a{
+  display: block;
+  margin-bottom: 30px;
+  color: #191919;
+  font-weight: bold;
+}
+.foot .foot-top > ul > li li a{
+  line-height: 30px;
+  color: #939393;
+}
+.foot .foot-top > ul > li:last-child ul{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.foot .foot-top > ul > li:last-child input{
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-right: transparent;
+}
+.foot .foot-top > ul > li:last-child input:last-child{
+  background: #252525;
+  color: #fff;
+  border: 1px solid #252525;
+}
+:focus{
+  outline: none;
+}
+.foot-bottom{
+  width: 1903px;
+  margin: 0 auto;
+}
+.foot-bottom .A{
+  width: 60%;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.foot-bottom .A ul{
+  display: flex;
+}
+.foot-bottom .A ul li a{
+  font-size: 14px;
+}
+.foot-bottom .A ul li a::after{
+  position: relative;
+  top: -2px;
+  content: "|";
+  padding: 0 10px;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.foot-bottom .A ul li:last-child a::after{
+  content: "";
+}
+.foot-bottom .A p{
+  position: fixed;
+  right: 0;
+  bottom: 0;
 }
