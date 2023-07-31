@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .grid{
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+          grid-template-columns: 200px 200px 400px 200px 200px;
+          /* grid 에서의 columns px값은 가로사이즈를 지정함 */
+            grid-template-areas:
+            "logo menu menu menu menu"
+            "slide slide slide slide slide"
+            "notice notice banner short short"
+            "ftlogo copyright copyright copyright sns";
+            grid-template-rows: 100px 300px 200px 100px;
+          /* grid 에서의 rows px값은 세로사이즈를 지정함 */
+        }
+        .grid > div:first-child{
+            grid-area: logo;
+            background: lightblue;
+        }
+        .grid > div:nth-child(2){
+            grid-area: menu;
+            background: skyblue;
+        }
+        .grid > div:nth-child(3){
+            grid-area: slide;
+            background: darkblue;
+        }
+        .grid > div:nth-child(4){
+            grid-area: notice;
+            background: deepskyblue;
+        }
+        .grid > div:nth-child(5){
+            grid-area: banner;
+            background: lightslategray;
+        }
+        .grid > div:nth-child(6){
+            grid-area: short;
+            background: blue;
+        }
+        .grid > div:nth-child(7){
+            grid-area: ftlogo;
+            background: darkblue;
+        }
+        .grid > div:nth-child(8){
+            grid-area: copyright;
+            background: lightskyblue;
+        }
+        .grid > div:nth-child(9){
+            grid-area: sns;
+            background: lightseagreen;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="grid container1">
+      <div class="grid-item">logo</div>
+      <div class="grid-item">menu</div>
+      <div class="grid-item">slide</div>
+      <div class="grid-item">공지사항/갤러리</div>
+      <div class="grid-item">배너</div>
+      <div class="grid-item">바로가기</div>
+      <div class="grid-item">logo</div>
+      <div class="grid-item">copyright</div>
+      <div class="grid-item">sns</div>
+    </div>
+  </body>
+</html>
