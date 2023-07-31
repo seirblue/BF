@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul{
+        list-style: none;
+      }
+      a{
+        text-decoration: none;
+      }
+      .grid {
+        width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 200px 200px 400px 200px 200px;
+        /* grid 에서의 columns px값은 가로사이즈를 지정함 */
+        grid-template-areas:
+          "logo menu menu menu menu"
+          "slide slide slide slide slide"
+          "notice notice banner short short"
+          "ftlogo copyright copyright copyright sns";
+        grid-template-rows: 100px 300px 200px 100px;
+        /* grid 에서의 rows px값은 세로사이즈를 지정함 */
+      }
+      .grid > div:first-child {
+        grid-area: logo;
+      }
+      .grid > div:nth-child(2) {
+        grid-area: menu;
+      }
+      .grid > div:nth-child(3) {
+        grid-area: slide;
+      }
+      .grid > div:nth-child(4) {
+        grid-area: notice;
+      }
+      .grid > div:nth-child(5) {
+        grid-area: banner;
+      }
+      .grid > div:nth-child(6) {
+        grid-area: short;
+      }
+      .grid > div:nth-child(7) {
+        grid-area: ftlogo;
+      }
+      .grid > div:nth-child(8) {
+        grid-area: copyright;
+      }
+      .grid > div:nth-child(9) {
+        grid-area: sns;
+      }
+      .menu {
+        display: flex;
+        justify-content: flex-end;
+        text-align: center;
+      }
+      .menu > ul li:first-child{
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid container1">
+      <div class="grid-item">logo</div>
+      <div class="grid-item">
+        <div class="menu">
+            <ul class="menu1">
+                <li>menu1</li>
+                <li>submenu1</li>
+                <li>submenu2</li>
+                <li>submenu3</li>
+                <li>submenu4</li>
+            </ul>
+            <ul class="menu2">
+                <li>menu2</li>
+                <li>submenu1</li>
+                <li>submenu2</li>
+                <li>submenu3</li>
+                <li>submenu4</li>
+            </ul>
+            <ul class="menu3">
+                <li>menu3</li>
+                <li>submenu1</li>
+                <li>submenu2</li>
+                <li>submenu3</li>
+                <li>submenu4</li>
+            </ul>
+            <ul class="menu4">
+                <li>menu4</li>
+                <li>submenu1</li>
+                <li>submenu2</li>
+                <li>submenu3</li>
+                <li>submenu4</li>
+            </ul>
+        </div>
+      </div>
+      <div class="grid-item">slide</div>
+      <div class="grid-item">공지사항/갤러리</div>
+      <div class="grid-item">배너</div>
+      <div class="grid-item">바로가기</div>
+      <div class="grid-item">logo</div>
+      <div class="grid-item">copyright</div>
+      <div class="grid-item">sns</div>
+    </div>
+  </body>
+</html>
