@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1, maximum-scale=1" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+      }
+      #wrap {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+      .top{
+        height: 400px;
+        background: #eee;
+      }
+      .contents{
+        display: flex;
+        height: 400px;
+      }
+      .contents .left{
+        width: 50%;
+        height: 100%;
+        background: #ddd;
+      }
+      .contents .right{
+        width: 50%;
+        height: 100%;
+        background: #ccc;
+      }
+      @media screen and (max-width:500px) {
+        .contents {
+          flex-direction: column;
+        }
+        .contents .left{
+          width: 100%;
+          flex-shrink: 0;
+        }
+        .contents .right{
+          width: 100%;
+          flex-shrink: 0;
+        }
+      }
+      /* shrink때문에 세로로 떨어져도 400px 안에 다 들어가려고 하기때문에 left와 right가 400px을 각각 갖지 못하고 200px씩 나눠서 갖게됐음 */
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="top"></div>
+      <div class="contents">
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+    </div>
+  </body>
+</html>
