@@ -39,15 +39,20 @@
       let num = document.getElementById("p01").classList.length;
       let b = document.getElementById("p01").classList;
       let c = "";
+      let d = "";
       console.log(num + b);
       b.forEach(function (keys, item) {
         // c=c+1; c + = 1
         // c = c + "keys" + item + "=" + keys + "<br>";
-        c +="keys" + item + "=" + keys + "<br>";
-        // 바로 위 두줄은 같은 의미 item=index number / keys=변수
+        c += "keys" + item + "=" + keys + "\r";
+        // 바로 위 두줄은 같은 의미 item=index number / keys=변수, 문자에만 ""사용
+        d += "keys" + item + "=" + keys + "<br>";
         console.log(c);
-        document.getElementById("p02").innerHTML = c;
+        document.getElementById("p02").innerHTML = d;
       });
+      console.log("하나" + "둘" + "셋");
+      console.log(1 + 2 + 3);
+    //   "문자" + "문자"는 결합, 숫자 + 숫자는 연산
     </script>
   </body>
 </html>
