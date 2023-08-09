@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = 10;
+      let b = 20;
+      let c = 30;
+      let d = 40;
+      let e = "10";
+      document.write(a > b && c < d, "<br>");
+      // 둘중에 하나라도 false가 있으면 true가 있어도 false만 출력, 둘 다 true면 true를 출력
+      document.write(a > b || c < d, "<br>");
+      // 둘중에 하나라도 true가 있으면 false가 있어도 true를 출력
+      document.write(!(a > b) || c < d, "<br>");
+      // a>b가 false인데 !로 부정해서 true가 출력되게 만듦
+      document.write(a === e, "<br>");
+      document.write(typeof a, "<br>");
+      document.write(typeof e, "<br>");
+      let f = Number("10");
+      document.write(typeof f, "<br>");
+      let g = Number("하나");
+      document.write(g, "<br>");
+      // 문자인 "하나" 를 Number로 바꿔달라고 했는데 변환이 안돼서 Not a Number 해서 NaN으로 출력
+      document.write(typeof parseFloat(10.33), "<br>");
+      document.write(typeof parseFloat("10.33"), "<br>");
+      document.write(typeof parseFloat(e), "<br>");
+      document.write(parseFloat("40 50 60"), "<br>");
+      document.write(parseFloat("40h"), "<br>");
+      // parseFloat 알아서 구문을 분석해서 처음에 나오는 숫자를 출력함
+      document.write(parseFloat("h40"), "<br>");
+      // 처음에 나온게 숫자가 아니라 문자여서 NaN으로 출력됨
+      document.write(parseInt("10.33"), "<br>");
+      document.write(parseInt(10.33), "<br>");
+      document.write(parseInt(10.55), "<br>");
+      // 정수로 반환해줌 (소숫점 뒤를 버림)
+    //   let y = "5";
+    //   let x = +y;
+    //   document.write(typeof y + "<br>" + typeof x + "<br>");
+      // y가 문자로 된 숫자인데 그걸 +로 숫자로 변환하라고 명령해서 숫자로 출력되게 만듦
+      let y = "하나";
+      let x = +y;
+      document.write(typeof y + "<br>" + typeof x + "<br>");
+    </script>
+  </body>
+</html>
