@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let score = Number(prompt("점수를 입력해주세요"));
+      let level = parseInt(score / 10);
+      let result = "";
+      /* if (score >= 90) {
+        result = "A";
+      } else if (score >= 80) {
+        result = "B";
+      } else {
+        result = "F";
+      } */
+      console.log(level);
+      switch (level) {
+        case 9:
+          result = "A";
+          break;
+        case 8:
+          result = "B";
+          break;
+        default:
+          result = "F";
+      }
+      /* switch (area) {
+        case "서울":
+        case "seoul":
+        case "Seoul":
+        case "s":
+        case "S":
+          num = "02";
+          break;
+        case "대전":
+          num = "042";
+          break;
+        default:
+          num = "등록되지 않은 지역";
+      } */
+      document.write(
+        "당신이 입력한 점수는 " + score + " 이고 학점은 " + result + "입니다"
+      );
+    </script>
+  </body>
+</html>
