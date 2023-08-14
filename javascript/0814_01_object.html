@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      /* let firstName = "John";
+      let lastName = "Doe";
+      let age = 50;
+      let eyeColor = "blue"; */
+      let person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue",
+        hobby: "여행",
+        area: "대전",
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+      let person1 = {};
+      person1.firstName = "O";
+      person1.lastName = "YT";
+      person1.age = 20;
+      /* document.getElementById("demo").innerHTML =
+        firstName + lastName + " is " + age + " years old."; */
+      /* document.getElementById("demo").innerHTML =
+        person.firstName +
+        person.lastName +
+        " is " +
+        person.age +
+        " years old."; */
+      document.getElementById("demo").innerHTML =
+        person.fullName() + " is " + person.age + " years old.<br>" +
+        person1.firstName+" is "+person1.age+" years old."
+    </script>
+  </body>
+</html>
