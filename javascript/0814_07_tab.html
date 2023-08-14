@@ -13,6 +13,7 @@
       .tab-contents {
         padding: 50px;
         text-align: center;
+        background-repeat: no-repeat;
       }
       .tab-button {
         display: flex;
@@ -45,14 +46,11 @@
       <p class="tab-link">content4</p>
     </div>
     <script>
-      const bg_color = ["url(images/photo1.jpg", 
-      "url(images/photo2.jpg", 
-      "url(images/photo3.jpg", 
-      "url(images/photo4.jpg"];
       let content = document.querySelectorAll(".tab-contents");
       let btn = document.querySelectorAll(".tab-link");
       for (let i = 0; i <= 3; i++) {
-        content[i].style.backgroundImage = bg_color[i];
+        content[i].style.backgroundImage =
+          "url(images/photo" + (i + 1) + ".jpg)";
         // btn[i].style.backgroundColor = bg_color[i];
         content[i].style.display = "none";
       }
@@ -63,7 +61,8 @@
           let j = Array.from(btn).indexOf(e.target);
           console.log("j : " + j);
           for (let i = 0; i <= 3; i++) {
-            content[i].style.backgroundImage = bg_color[i];
+            content[i].style.backgroundImage =
+              "url(images/photo" + (i + 1) + ".jpg)";
             // btn[i].style.backgroundColor = bg_color[i];
             content[i].style.display = "none";
             content[j].style.display = "block";
