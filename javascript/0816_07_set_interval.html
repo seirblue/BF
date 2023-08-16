@@ -63,6 +63,7 @@
     </div>
     <script>
         let i = 0;
+        let slideContainer = document.querySelector(".slideShow");
         let slides = document.getElementsByTagName("li");
         let slidePrev = document.getElementById("prev");
         let slideNext = document.getElementById("next");
@@ -78,6 +79,24 @@
             interval = setInterval(slide,1000);
         }
         slideStart();
+        /* slideContainer.onmouseenter=function(){
+            clearInterval(interval);
+        } */
+        slideNext.addEventListener("mouseenter", function(){
+            clearInterval(interval);
+        })
+        slideContainer.onmouseleave=function(){
+            slideStart();
+        }
+        slideNext.onclick=function(){
+            slide();
+        }
+        slidePrev.onclick=function(){
+            slides[i].classList.remove("on");
+            i--;
+            if (i < 0) i = 5;
+            slides[i].classList.add("on");
+        }
     </script>
   </body>
 </html>
