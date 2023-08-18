@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      const person = {
+        fname: "John",
+        lname: "Doe",
+        age: 25,
+        area: "대전",
+        tel: "010-000-0000",
+      };
+      let txt = "";
+      for (let x in person) {
+        txt += person[x] + " ";
+        console.log("x : " + x);
+      }
+      document.getElementById("demo").innerHTML = txt;
+      const numbers = [45, 4, 9, 16, 25];
+      let txt1 = "";
+    //   for (let x in numbers) {
+        for (let x = 0; i <= 4; i++){
+        txt1 += numbers[x] + "<br>";
+        console.log("x : " + x);
+      }
+      document.getElementById("demo").innerHTML = txt1;
+    </script>
+  </body>
+</html>
