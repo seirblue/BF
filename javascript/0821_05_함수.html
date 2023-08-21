@@ -47,12 +47,11 @@
         document.getElementsByTagName("img")[0].src =
           "images/photo" + i + ".jpg";
       }
-      prevBtn.onclick = function () {
-        gallery(0);
-      };
-      nextBtn.onclick = function () {
-        gallery(1);
-      };
+      btn.forEach(function(item, keys){
+        item.onclick=function(){
+            gallery(keys);
+        }
+      })
     </script>
   </body>
 </html>
