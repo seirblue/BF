@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      header {
+        position: relative;
+      }
+      .menu {
+        width: 1280px;
+        margin: 0 auto;
+        border: 1px solid rgba(32, 178, 171, 0.418);
+      }
+      .menu ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+      }
+      .menu ul li {
+        flex: 1 1 20%;
+        text-align: center;
+        line-height: 50px;
+      }
+      .menu ul li a:hover,
+      .menu ul li a.on {
+        background: rgba(32, 178, 171, 0.178);
+        font-size: 20px;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.5);
+        transition: all 0.3s;
+      }
+      .menu ul li a {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: lightseagreen;
+      }
+      /* .menu ul li a:hover:after,
+      .menu ul li a.active::after {
+        position: absolute;
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(32, 178, 171, 0.5);
+        top: 10%;
+        right: 30%;
+      } */
+      .submenu {
+        position: absolute;
+        width: 100%;
+        height: 0;
+        left: 0;
+        top: 50px;
+        background: rgba(32, 178, 171, 0.075);
+        overflow: hidden;
+        transition: height 0.5s;
+      }
+      /* .submenu.on {
+        height: 200px;
+      } */
+      .submenu .lnb {
+        width: 1280px;
+        margin: 0 auto;
+      }
+      .submenu .lnb > ul {
+        display: flex;
+        justify-content: space-between;
+      }
+      .submenu .lnb > ul > li {
+        flex: 1 1 20%;
+        line-height: 40px;
+        text-align: center;
+      }
+      .submenu .lnb > ul > li a {
+        color: #333;
+      }
+      .submenu .lnb > ul > li a:hover {
+        font-size: 18px;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.5);
+        text-decoration: underline rgba(0, 0, 0, 0.5);
+        text-underline-offset: 10px;
+        transition: 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="menu">
+        <ul>
+          <li><a href="#">모나미소개</a></li>
+          <li><a href="#">모나미제품</a></li>
+          <li><a href="#">NEWS & VIDEO</a></li>
+          <li><a href="#">모나미 미술대회</a></li>
+          <li><a href="#">고객지원</a></li>
+          <li><a href="#">기업 구매 / 개발</a></li>
+        </ul>
+      </div>
+      <div class="submenu">
+        <div class="lnb">
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#">CEO 메시지</a></li>
+                <li><a href="#">회사정보</a></li>
+                <li><a href="#">회사연혁</a></li>
+                <li><a href="#">윤리강령</a></li>
+                <li><a href="#">투자정보</a></li>
+                <li><a href="#">CI</a></li>
+                <li><a href="#">채용정보</a></li>
+                <li><a href="#">찾아오시는 길</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">펜</a></li>
+                <li><a href="#">마카</a></li>
+                <li><a href="#">형광펜</a></li>
+                <li><a href="#">미술용품</a></li>
+                <li><a href="#">기타</a></li>
+                <li><a href="#">카탈로그</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">보도자료</a></li>
+                <li><a href="#">동영상자료</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">미술대회 소개</a></li>
+                <li><a href="#">수상작 발표</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">자주묻는질문</a></li>
+                <li><a href="#">문의하기</a></li>
+                <li><a href="#">이벤트</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">대량 구매 문의</a></li>
+                <li><a href="#">기업 및 단체 구매</a></li>
+                <li><a href="#">산업용 맞춤 제품개발</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <script>
+      let subMenu = document.querySelector(".submenu");
+      let sub = document.querySelectorAll(".lnb > ul > li");
+      let gnb = document.querySelectorAll(".menu ul li a");
+      let ht = document.querySelector(".lnb").offsetHeight;
+      console.log("ht :" + ht);
+      gnb.forEach(function (item, keys) {
+        console.log(keys);
+        item.addEventListener("mouseenter", function () {
+          subMenu.style.height = ht + "px";
+        });
+        item.addEventListener("mouseleave", function () {
+          subMenu.style.height = 0 + "px";
+        });
+      });
+      sub.forEach(function (item, keys) {
+        // let x = gnb[keys].querySelector("a");
+        item.addEventListener("mouseenter", function () {
+          subMenu.style.height = ht + "px";
+          gnb[keys].classList.add("on", "active");
+        });
+        item.addEventListener("mouseleave", function () {
+          subMenu.style.height = 0 + "px";
+          gnb[keys].classList.remove("on", "active");
+        });
+      });
+    </script>
+  </body>
+</html>
