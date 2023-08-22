@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      // String : 자바스크립트에서 문자열을 다루는 객체
+      // let str = "nice to meet you";
+      let str = new String("nice to meet to meet you");
+      document.write(str.search("m") + "<br>");
+      // search : 인덱스번호 0번부터 공백을 포함해서 위치하는 인덱스 번호를 출력, 대소문자 구문 O, 찾는 대상이 없으면 -1로 출력 *앞에서부터 검색
+
+      document.write("replace : " + str.replace("nice", "happy") + "<br>");
+      // replace : 찾은 대상을 바꿔줌
+
+      document.write("indexOf : " + str.indexOf("to") + "<br>");
+      // indexOf : search랑 비슷함. 해당하는 문자열을 찾아서 인덱스 위치를 반환, 찾는 대상이 없으면 -1로 출력 대소문자 구분 O
+
+      document.write("lastIndexOf : " + str.lastIndexOf("to") + "<br>");
+      // lastIndexOf : indexOf랑 다르게 뒤에서부터 찾는데 인덱스 번호는 앞에서부터. 대소문자 구분 O
+
+      document.write("match : " + str.match("nice") + "<br>");
+      // match : 말 그대로 매치되는 대상이 존재하면 그대로 출력, 대소문자 구분 O 찾는 대상이 없으면 null로 출력
+
+      document.write("charAt : " + str.charAt(3) + "<br>");
+      // charAt : 해당하는 인덱스 번호에 있는 문자를 출력
+
+      document.write("substr : " + str.substr(0, 3) + "<br>");
+      // substr : 해당하는 인덱스 번호에 있는 문자부터 출력, 인덱스 번호를 생략하면 처음부터 출력 (start번호, end 번호) -> (0, 3) 이면 3번째 문자는 미포함
+
+      document.write("substr : " + str.substr(-3, 1) + "<br>");
+      // 인덱스 번호를 음의 값 (-)을 입력하면 뒤에서부터 가져옴 / start번호가 음의 값이 들어갔을 때 end 번호가 lenght로 바뀜 (start, lenght)
+
+      document.write("substring : " + str.substring() + "<br>");
+      // substring : (start, end)
+
+      document.write("substring : " + str.substring(0, 3) + "<br>");
+      // 해당하는 인덱스 번호에 있는 문자부터 출력, 인덱스 번호를 생략하면 처음부터 출력 (start번호, end 번호) -> (0, 3) 이면 3번째 문자는 미포함
+
+      document.write("substring : " + str.substring(-3, 3) + "<br>");
+      // 음의 값 (-)을 입력해도 0으로 인식함.
+
+      let txt = "123456-1234567";
+      //   document.write(txt.replace(txt.substr(7), "*******"));
+      document.write("길이 : " + txt.length + "<br>");
+      //   document.write(txt.replace(txt.substr(txt.length - 7), "*******"));
+      document.write(
+        "substr : " + txt.replace(txt.substr(txt.length - 6), "******") + "<br>"
+      );
+      //   document.write(txt.substring(0, 8) + "******" + "<br>")
+      document.write(
+        "substring : " + txt.substring(0, txt.length - 6) + "******" + "<br>"
+      );
+
+      document.write("slice : " + txt.slice(0, 7) + "<br>");
+      // slice : (start, end)
+      document.write("slice : " + txt.slice(-2) + "<br>");
+      document.write("slice : " + txt.slice(-3, -2) + "<br>");
+
+      document.write("split : " + str.split(" ") + "<br>");
+      // split : 문자열을 인수 값으로 나눠서 배열 취급이 가능
+      let arr = str.split(" ");
+      document.write(arr[0] + "<br>");
+      document.write(arr[1] + "<br>");
+      document.write(arr[2] + "<br>");
+      document.write(arr[3] + "<br>");
+      document.write(arr[4] + "<br>");
+      document.write(arr[5] + "<br>" + "<br>");
+
+      let txt2 = "nice, to, meet, you";
+      let arr2 = txt2.split(",");
+      let n = arr2.length;
+      for (let i = 0; i < n; i++) {
+        document.write(arr2[i] + "<br>");
+      }
+
+      document.write("toUpperCase : " + txt2.toUpperCase() + "<br>");
+
+      let txt3 = "Microsoft and microsoft and microsoft";
+      document.write(
+        "replace : " + txt3.replace("microsoft", "마이크로소프트") + "<br>"
+      );
+      document.write(
+        "replaceAll : " +
+          txt3.replaceAll("microsoft", "마이크로소프트") +
+          "<br>"
+      );
+      document.write(
+        "replace : " +
+          txt3.replace(/microsoft/i, "마이크로소프트") +
+          "<br>"
+      );
+      // /~~/i : 정규식이라서 ""는 기입하면 안됨, 대소문자 구분을 하지 않겠다
+
+      document.write(
+        "replace : " +
+          txt3.replace(/microsoft/g, "마이크로소프트") +
+          "<br>"
+      );
+      // /~~/g : 
+      document.write(
+        "replace : " +
+          txt3.replace(/Microsoft/g, "마이크로소프트") +
+          "<br>"
+      );
+    </script>
+  </body>
+</html>
