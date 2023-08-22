@@ -51,6 +51,7 @@
         }
         console.log(i);
         imgsrc.setAttribute("src", imgattr.replace(n, i));
+        imgsrc.setAttribute("alt", "photo" + i);
       }
       btn.forEach(function (item, keys) {
         item.onclick = function () {
