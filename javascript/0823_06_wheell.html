@@ -31,11 +31,21 @@
     <script>
       console.log(window.innerHeight);
       window.addEventListener("wheel", function (e) {
-        let ht = document.documentElement.scrollTop;
-        // console.log(e.wheelDelta);
-        // console.log(e.deltaY);
-        console.log(ht);
-        window.scrollTo(0, 1000);
+        let delta = e.deltaY || e.wheelDelta;
+        console.log(e.deltaY);
+        let down = delta < 0;
+        let ht = window.pageYOffset || document.documentElement.scrollTop;
+        console.log("window.pageYOffset : " + window.pageYOffset);
+        console.log("ht : " + ht);
+        let n = Math.ceil(ht / window.innerHeight) * window.innerHeight;
+        console.log("n : " + n);
+        let nextPage = down
+          ? Math.floor(ht / window.innerHeight) * window.innerHeight
+          : Math.ceil(ht / window.innerHeight) * window.innerHeight;
+        window.scrollTo({
+          top: nextPage,
+          behavior: "smooth",
+        });
       });
     </script>
   </body>
