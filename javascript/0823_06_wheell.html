@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        height: 100vh;
+      }
+      section:first-child {
+        background: lightcoral;
+      }
+      section:nth-child(2) {
+        background: seagreen;
+      }
+      section:nth-child(3) {
+        background: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <section></section>
+    <section></section>
+    <section></section>
+    <script>
+      console.log(window.innerHeight);
+      window.addEventListener("wheel", function (e) {
+        let ht = document.documentElement.scrollTop;
+        // console.log(e.wheelDelta);
+        // console.log(e.deltaY);
+        console.log(ht);
+        window.scrollTo(0, 1000);
+      });
+    </script>
+  </body>
+</html>
