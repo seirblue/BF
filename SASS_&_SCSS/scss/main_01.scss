@@ -1,0 +1,59 @@
+$bg: #00f;
+$color: #8ac007;
+$width: 500px;
+$imgurl: "images/";
+nav {
+  width: $width;
+  margin: 0 auto;
+  ul {
+    display: flex;
+    color: $color;
+    background: url("../../" + $imgurl + "photo1.jpg");
+    li {
+      a {
+        width: $width;
+        color: slateblue;
+      }
+    }
+  }
+}
+header {
+  $width: 100px;
+  div.head {
+    ul.gnb {
+      li {
+        width: $width;
+      }
+    }
+  }
+}
+$wd1: 600px;
+$wd2: 300px;
+footer {
+  > div {
+    height: 100px;
+  }
+  div.top {
+    width: $wd1;
+    // background: if(조건,참,거짓);
+    // background: if($wd1 > 500, red, blue);
+    background: if($wd1 >= 500 and $wd1 <=1000, red, blue);
+    // 논리연산자
+  }
+  div.bottom {
+    width: $wd2;
+    background: if($wd2 > 500, red, blue);
+  }
+}
+/* @for $i from 1 through 3 {
+  // 1부터 3까지 반복
+  .menu:nth-child($i) {
+    width: 50px * $i;
+  }
+} */
+@for $i from 1 to 3 {
+  // 1부터 2까지 반복
+  .menu:nth-child(#{$i}) {
+    width: 50px * $i;
+  }
+}
