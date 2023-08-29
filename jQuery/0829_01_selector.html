@@ -1,22 +1,50 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script>
-        /* $(document).ready(function(){
+      /* $(document).ready(function(){
             $("p").text("변경되었습니다");
         }) */
-        $(function(){
+      /* $(function(){
             $("p").text("변경되었습니다");
-        })
-        // 문서를 먼저 읽어서 script가 head 안에 있음에도 실행되게 만듦
+        }) */
+      // 문서를 먼저 읽어서 script가 head 안에 있음에도 실행되게 만듦
+      // body 안에 script가 있으면 위의 function()은 없어도 됨
     </script>
-</head>
-<body>
+  </head>
+  <body>
+    <div></div>
     <p>문단태그</p>
-</body>
+    <p>문단태그</p>
+    <p>문단태그</p>
+    <p>문단태그</p>
+    <p>문단태그</p>
+    <p>문단태그</p>
+
+    <script>
+      // $("p").text("변경되었습니다");
+      /* for (let i = 0; i <= 5; i++) {
+        document.getElementsByTagName("p")[i].textContent = "변경되었습니다";
+      } */
+      // $("p:first").text("변경되었습니다")
+      // $("p:first-child").text("변경되었습니다")
+      // $("p").eq(0).text("변경되었습니다") // first-child나 nth-child같이 선택
+      // $("p:eq(0)").text("변경되었습니다") // first-child나 nth-child같이 선택
+      // $("p:gt(0)").text("변경되었습니다") // @보다 큰것을 선택
+      // $("p:lt(2)").text("변경되었습니다") // @보다 작은것을 선택
+      // $("p:even()").text("변경되었습니다") // @들 중에 짝수를 선택
+      // $("p:odd()").text("변경되었습니다") // @들 중에 홀수를 선택
+      // $("div+p").text("변경되었습니다"); // 형제들 중 가장 인접한것을 선택
+      // $("div~p").text("변경되었습니다"); // 형제들 전부를 선택
+      $(":empty").html("<h1>제목태그");
+      $(":header").text("h1태그");
+      // $(":contains('태그')").css("color","coral");
+      $("h1:contains('h1')").css("color","coral");
+    </script>
+  </body>
 </html>
