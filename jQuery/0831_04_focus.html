@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <script>
+      $(function () {
+        $("input").val("아이디를 입력해주세요").css({
+          color: "red",
+          opacity: "0.5",
+          border: "1px solid blue",
+          height: "50px",
+        });
+        let txt = $("input").val();
+        $("input")
+          .focus(function () {
+            $(this).val("").css({
+              color: "black",
+              opacity: "1",
+              border: "1px solid black",
+              height: "50px",
+            });
+          })
+          .blur(function () {
+            if ($(this).val() == "") {
+              $(this).val(txt).css({
+                color: "red",
+                opacity: "0.5",
+                border: "1px solid blue",
+                height: "50px",
+              });
+            }
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <input type="text" />
+  </body>
+</html>

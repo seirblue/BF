@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <script>
+      $(function () {
+        $("ul.gnb li a").hover(
+          function () {
+            $(".lnb").css({ height: "160px" });
+            $(this).css({ background: "lightslategray" });
+          },
+          function () {
+            $(".lnb").css({ height: "0px" });
+            $("ul.gnb li a").css({ background: "white" });
+          }
+        );
+        $(".lnb").hover(
+          function () {
+            $(".lnb").css({ height: "160px" });
+          },
+          function () {
+            $(".lnb").css({ height: "0px" });
+          }
+        );
+        $(".lnb > ul > li").hover(
+          function () {
+            let i = $(this).index();
+            $(".gnb li").eq(i).find("a").css({ background: "lightslategray" });
+          },
+          function () {
+            $(".gnb li a").css({ background: "white" });
+          }
+        );
+      });
+    </script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      ul.gnb {
+        width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        border: 1px solid lightslategray;
+      }
+      ul.gnb li {
+        width: 20%;
+        text-align: center;
+      }
+      ul.gnb li a {
+        display: block;
+        width: 100%;
+        line-height: 50px;
+      }
+      ul.gnb li a:hover,
+      ul.gnb li a.on {
+        background: lightslategray;
+        /* color: white; */
+      }
+      .lnb {
+        background: lightsteelblue;
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+      }
+      .lnb > ul {
+        width: 1280px;
+        margin: 0 auto;
+        display: flex;
+      }
+      .lnb > ul > li {
+        width: 20%;
+      }
+      .lnb > ul > li ul {
+        width: 100%;
+      }
+      .lnb > ul > li a {
+        display: block;
+        width: 100%;
+        line-height: 30px;
+        text-align: center;
+        border: 1px solid lightsteelblue;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="gnb">
+      <li><a href="#">메뉴1</a></li>
+      <li><a href="#">메뉴2</a></li>
+      <li><a href="#">메뉴3</a></li>
+      <li><a href="#">메뉴4</a></li>
+      <li><a href="#">메뉴5</a></li>
+    </ul>
+    <div class="lnb">
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#">서브메뉴1</a></li>
+            <li><a href="#">서브메뉴1</a></li>
+            <li><a href="#">서브메뉴1</a></li>
+            <li><a href="#">서브메뉴1</a></li>
+            <li><a href="#">서브메뉴1</a></li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <li><a href="#">서브메뉴2</a></li>
+            <li><a href="#">서브메뉴2</a></li>
+            <li><a href="#">서브메뉴2</a></li>
+            <li><a href="#">서브메뉴2</a></li>
+            <li><a href="#">서브메뉴2</a></li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <li><a href="#">서브메뉴3</a></li>
+            <li><a href="#">서브메뉴3</a></li>
+            <li><a href="#">서브메뉴3</a></li>
+            <li><a href="#">서브메뉴3</a></li>
+            <li><a href="#">서브메뉴3</a></li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <li><a href="#">서브메뉴4</a></li>
+            <li><a href="#">서브메뉴4</a></li>
+            <li><a href="#">서브메뉴4</a></li>
+            <li><a href="#">서브메뉴4</a></li>
+            <li><a href="#">서브메뉴4</a></li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <li><a href="#">서브메뉴5</a></li>
+            <li><a href="#">서브메뉴5</a></li>
+            <li><a href="#">서브메뉴5</a></li>
+            <li><a href="#">서브메뉴5</a></li>
+            <li><a href="#">서브메뉴5</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
