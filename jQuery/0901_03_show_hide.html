@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <script>
+      $(function () {
+        $("#fadeOut").click(function () {
+          $("p").hide(500, function () {
+            console.log($("p").css("display"));
+          });
+        });
+      });
+    </script>
+    <style>
+      div#eee {
+        width: 200px;
+        height: 200px;
+        background: #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      p {
+        width: 100px;
+        height: 100px;
+        background: slateblue;
+      }
+      hr {
+        margin: 20px 0;
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="eee">
+      <p></p>
+    </div>
+    <hr />
+    <button id="fadeOut">fadeOut</button>
+  </body>
+</html>

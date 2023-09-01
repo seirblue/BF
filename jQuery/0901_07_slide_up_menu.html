@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <script>
+      $(function () {
+        // $(".lnb").css({ display: "none" });
+        $(".lnb > ul > li").css({ display: "none" });
+        /* $(".gnb li a, .lnb").hover(
+          function () {
+            $(".lnb").stop().slideDown(700);
+          },
+          function () {
+            $(".lnb").stop().slideUp(700);
+          }
+        ); */
+        $(".gnb li a").hover(
+          function () {
+            let i = $(this).parent().index();
+            console.log(i);
+            $(".lnb > ul > li").eq(i).stop().slideDown(700);
+          },
+          function () {
+            $(".lnb > ul > li").stop().slideUp(700);
+          }
+        );
+        $(".lnb > ul > li").hover(
+            function () {
+            let i = $(this).index();
+            $(".gnb ul li").eq(i).find("a").addClass("on");
+            $(this).stop().slideDown(700);
+          },
+          function () {
+            $(".gnb ul li a").removeClass("on");
+            $(".lnb > ul > li").stop().slideUp(700);
+          }
+        );
+      });
+    </script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .gnb {
+        width: 1280px;
+        margin: 0 auto;
+      }
+      .gnb ul {
+        display: flex;
+        justify-content: center;
+      }
+      .gnb ul li a {
+        padding: 20px;
+        display: block;
+      }
+      .gnb ul li a:hover,
+      .gnb ul li a.on {
+        background: #ccc;
+      }
+      .lnb {
+        background: #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gnb">
+      <ul>
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2222222222222222222</a></li>
+        <li><a href="#">메뉴3</a></li>
+        <li><a href="#">메뉴4</a></li>
+        <li><a href="#">메뉴555555</a></li>
+      </ul>
+    </div>
+    <div class="lnb">
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#">서브메뉴1</a></li>
+            <li><a href="#">서브메뉴1</a></li>
+            <li><a href="#">서브메뉴1</a></li>
+            <li><a href="#">서브메뉴1</a></li>
+            <li><a href="#">서브메뉴1</a></li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <li><a href="#">서브메뉴2</a></li>
+            <li><a href="#">서브메뉴2</a></li>
+            <li><a href="#">서브메뉴2</a></li>
+            <li><a href="#">서브메뉴2</a></li>
+            <li><a href="#">서브메뉴2</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

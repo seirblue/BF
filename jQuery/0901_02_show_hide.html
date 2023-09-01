@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <script>
+      $(function () {
+        // speed, easing, callback
+        // speed : "fast", "slow", 1000(ms)
+        // easing : "swing", "linear"
+        $("#show").click(function () {
+          $("p").show(500);
+        });
+        $("#hide").click(function () {
+          let txt = $("#hide").text();
+          if (txt == "hide") {
+            $("p").hide(500, function () {
+              $("#hide").text("show");
+              console.log(txt);
+            });
+          } else {
+            $("p").show(500, function () {
+              $("#hide").text("hide");
+            });
+          }
+        });
+        $("#toggle").click(function () {
+          $("p").toggle(500);
+        });
+        // a태그의 경로를 막는 방법 function (e) e.preventDefalt();
+        /* $("a").click(function (e) {
+          e.preventDefault(); // <- 해당 실행구문의 맨 처음에
+          $(".fd").fadeOut();
+        }); */
+        $("a").click(function () {
+            let txt = $("a").text();
+            console.log(txt);
+            if(txt == "fadeOut"){
+                $(".fd").fadeOut(500,function(){
+                  $("a").text("fadeIn");
+                });
+            } else {
+                $(".fd").fadeIn(500,function(){
+                  $("a").text("fadeOut");
+                });
+            }
+          return false; // <- 해당 실행구문의 맨 마지막에
+        });
+      });
+    </script>
+    <style>
+      div#eee {
+        width: 200px;
+        height: 200px;
+        background: #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      p,
+      div {
+        width: 100px;
+        height: 100px;
+        background: slateblue;
+      }
+      hr {
+        margin: 20px 0;
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="eee">
+      <p></p>
+    </div>
+    <hr />
+    <!-- <button id="show">show</button> -->
+    <button id="hide">hide</button>
+    <button id="toggle">toggle</button>
+    <hr />
+    <div class="fd"></div>
+    <a href="#">fadeOut</a>
+  </body>
+</html>

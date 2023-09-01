@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <script>
+      $(function () {
+        $("body").append('<div id="page"></div>');
+        function myfnc() {
+          $("#page").html(
+            "display : " +
+              $("p").css("display") +
+              "<br>" +
+              "opacity : " +
+              $("p").css("opacity")
+          );
+        }
+        /* $("#one").click(function () {
+          $("p").fadeTo(1000, 0, function () {
+            myfnc();
+          });
+        });
+        $("#two").click(function () {
+          $("p").fadeTo(1000, 0.5, function () {
+            myfnc();
+          });
+        });
+        $("#three").click(function () {
+          $("p").fadeTo(1000, 1, function () {
+            myfnc();
+          });
+        }); */
+        /* $("#three").click(function () {
+          $("p").fadeTo(1000, 1, myfnc());
+        }); */
+        $("button").click(function () {
+          let num = $(this).text();
+          $("p").fadeTo(1000, num, myfnc());
+        });
+      });
+    </script>
+    <style>
+      div#eee {
+        width: 200px;
+        height: 200px;
+        background: #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      p {
+        width: 100px;
+        height: 100px;
+        background: slateblue;
+      }
+      hr {
+        margin: 20px 0;
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="eee">
+      <p></p>
+    </div>
+    <hr />
+    <button id="one">0</button>
+    <button id="two">0.5</button>
+    <button id="three">1</button>
+  </body>
+</html>
