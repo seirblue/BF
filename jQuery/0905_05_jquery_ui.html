@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <title>Document</title>
+    <script>
+      $(function () {
+        $("button").click(function () {
+          $("p").animate({ width: "500px", backgroundColor: "#000" }, 1000);
+        });
+      });
+    </script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      p {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <hr />
+    <button>effect</button>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <title>Document</title>
+    <script>
+      $(function () {
+        $("#draggable").draggable();
+      });
+    </script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      #draggable {
+        width: 150px;
+        height: 150px;
+        padding: 0.5em;
+        border: 1px solid #ccc;
+        cursor: pointer;
+      }
+      #droppable {
+        width: 150px;
+        height: 150px;
+        padding: 0.5em;
+        float: left;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="draggable" class="ui-widget-content">
+      <p>Drag me around</p>
+    </div>
+  </body>
+</html>
