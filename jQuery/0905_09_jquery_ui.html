@@ -39,6 +39,8 @@
       $(function () {
         $("#ease").change(function () {
           let txt = $("select > option:selected").val();
+          let selectoption = $(this).find("option:selected")
+          selectoption.prop("selected",false);
           if (txt != "") {
             $("body").append(
               '<div class="box box1">' +
@@ -48,6 +50,9 @@
                 "></div></div>"
             );
           }
+          $(".box").click(function(){
+            $(this).remove();
+          })
         });
         $("button").click(function () {
           $(".box").each(function () {
