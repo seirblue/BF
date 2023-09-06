@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../javascript/css/swiper-bundle.css" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="../javascript/js/swiper-bundle.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      section {
+        height: 100vh;
+      }
+      section:first-child {
+        background: lightseagreen;
+      }
+      section:nth-child(2) {
+        background: lightslategray;
+      }
+      section:nth-child(3) {
+        background: lightsteelblue;
+      }
+    </style>
+    <script>
+      $(function () {
+        let ele = $("section");
+        $(ele).each(function (index) {
+          $(this).on("mousewheel", function () {
+            console.log(event.wheelDelta);
+            let moveTop = $(window).scrollTop();
+            let eleselector = $(ele).eq(index);
+            if (event.wheelDelta < 0) {
+              // 오류가 있을때 try, catch로 실행문 안의 구문이 없으면 아무것도 하지 말라고 하는것
+              if ($(eleselector).next() != undefined) {
+                try {
+                  moveTop = $(eleselector).next().offset().top;
+                } catch (e) {}
+              }
+            } else {
+              if ($(eleselector).prev() != undefined) {
+                try {
+                  moveTop = $(eleselector).prev().offset().top;
+                } catch (e) {}
+              }
+            }
+            $("html, body")
+              .stop()
+              .animate({ scrollTop: moveTop + "px" }, 600);
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <section></section>
+    <section></section>
+    <section></section>
+  </body>
+</html>
