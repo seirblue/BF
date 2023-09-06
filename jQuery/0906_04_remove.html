@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../javascript/css/swiper-bundle.css" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="../javascript/js/swiper-bundle.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <title>Document</title>
+    <style>
+      /* * {
+        margin: 0;
+        padding: 0;
+      } */
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .addbg {
+        background: #ccc;
+        font-size: 24px;
+        font-weight: 600;
+        transition: all 0.5s;
+      }
+      .addon {
+        color: lightseagreen;
+      }
+    </style>
+    <script>
+      $(function () {
+        $("button").click(function () {
+          // $(".info").remove(".top");
+          // $(".info").remove();
+          // $("p").remove(".top");
+          // $("p").empty();
+          // $("p").remove(".top,.bottom");
+          // --
+          // $(".top").addClass("addbg");
+          // $(".middle").addClass("addon");
+          // $(".bottom").addClass("addbg addon");
+          // --
+          $(".top").toggleClass("addbg");
+          $(".middle").toggleClass("addon");
+          $(".bottom").toggleClass("addbg addon");
+        });
+        /* $("button").hover(
+          function () {
+          $(".top").toggleClass("addbg");
+          $(".middle").toggleClass("addon");
+          $(".bottom").toggleClass("addbg addon");
+          },
+          function () {
+            $(".top").toggleClass("addbg");
+          $(".middle").toggleClass("addon");
+          $(".bottom").toggleClass("addbg addon");
+          }
+        ); */
+        $("button").hover(
+          function () {
+          $(".top").addClass("addbg");
+          $(".middle").addClass("addon");
+          $(".bottom").addClass("addbg addon");
+          },
+          function () {
+            $(".top").removeClass("addbg");
+          $(".middle").removeClass("addon");
+          $(".bottom").removeClass("addbg addon");
+          }
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <button>click</button>
+    <div class="info">
+      <p class="top">top</p>
+      <p class="middle">middle</p>
+      <p class="bottom">bottom</p>
+    </div>
+  </body>
+</html>
