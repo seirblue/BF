@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .slide{
+        width: 1280px;
+        height: 400px;
+        margin: 0 auto;
+        border: 1px solid lightseagreen;
+      }
+      .slide .item img{
+        /* width: 300px; */
+        height: 400px;
+        object-fit: cover;
+      }
+      .owl-prev span{
+        display: block;
+        text-indent: -9999px;
+        position: absolute;
+        width: 21px;
+        height: 39px;
+        top: 50%;
+        left: 2%;
+        transform: translateY(-50%);
+        background: url(../images/btns.png);
+      }
+      .owl-next span{
+        display: block;
+        text-indent: -9999px;
+        position: absolute;
+        width: 21px;
+        height: 39px;
+        top: 50%;
+        right: 2%;
+        transform: translateY(-50%);
+        background: url(../images/btns.png);
+        background-position: ;
+      }
+    </style>
+    <script>
+        $(function(){
+            $('.owl-carousel').owlCarousel({
+                items:1,
+                loop:true,
+                // margin:10,
+                nav:true,
+                autoplay:true,
+                autoplayTimeout:2000,
+                autoplayHoverPause:true,
+            })
+        })
+    </script>
+  </head>
+  <body>
+    <div class="slide">
+        <div class="owl-carousel owl-theme">
+            <div class="item"><h4><img src="../images/photo1.jpg" alt=""></h4></div>
+            <div class="item"><h4><img src="../images/photo2.jpg" alt=""></h4></div>
+            <div class="item"><h4><img src="../images/photo3.jpg" alt=""></h4></div>
+            <div class="item"><h4><img src="../images/photo4.jpg" alt=""></h4></div>
+            <div class="item"><h4><img src="../images/photo5.jpg" alt=""></h4></div>
+            <div class="item"><h4><img src="../images/photo6.jpg" alt=""></h4></div>
+        </div>
+    </div>
+  </body>
+</html>
